@@ -1,0 +1,104 @@
+/*! Progress Bars */
+
+.progress {
+  position: relative;
+  width: 100%;
+  height: var(--progress-height);
+  line-height: var(--progress-height);
+  font-size: var(--progress-font-size);
+  background-color: var(--progress-bg-color);
+  border-radius: var(--progress-border-radius);
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--progress-box-shadow);
+
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    text-align: center;
+    color: var(--progress-color);
+    background-color: var(--progress-bar-color);
+    transition: var(--progress-speed) width;
+    user-select: none;
+    cursor: default;
+  }
+
+  &.progress-indeterminate .progress-bar {
+    width: 75% !important;
+    animation: progress-indeterminate ease-in-out var(--progress-speed-indeterminate) infinite;
+  }
+
+  /* Sizes */
+  &.progress-xs {
+    font-size: var(--progress-font-size-xs);
+    height: var(--progress-height-xs);
+    line-height: var(--progress-height-xs);
+  }
+
+  &.progress-sm {
+    font-size: var(--progress-font-size-sm);
+    height: var(--progress-height-sm);
+    line-height: var(--progress-height-sm);
+  }
+
+  &.progress-lg {
+    font-size: var(--progress-font-size-lg);
+    height: var(--progress-height-lg);
+    line-height: var(--progress-height-lg);
+  }
+
+  &.progress-xl {
+    font-size: var(--progress-font-size-xl);
+    height: var(--progress-height-xl);
+    line-height: var(--progress-height-xl);
+  }
+
+  /* Variations */
+  &.intent-primary {
+    & .progress-bar {
+      background-color: var(--state-primary);
+    }
+  }
+
+  &.intent-success {
+    & .progress-bar {
+      background-color: var(--state-success);
+    }
+  }
+
+  &.intent-info {
+    & .progress-bar {
+      background-color: var(--state-info);
+    }
+  }
+
+  &.intent-warning {
+    & .progress-bar {
+      background-color: var(--state-warning);
+    }
+  }
+
+  &.intent-danger {
+    & .progress-bar {
+      background-color: var(--state-danger);
+    }
+  }
+}
+
+@keyframes progress-indeterminate {
+  0% {
+    left: -65%;
+  }
+
+  50% {
+    left: 90%;
+  }
+
+  100% {
+    left: -65%;
+  }
+}

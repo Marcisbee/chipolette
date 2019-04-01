@@ -1,0 +1,22 @@
+{
+  "name": "chipolette",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/chipolette.less",
+  "scripts": {
+    "build": "lessc src/chipolette.less dist/chipolette.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcisbee/chipolette.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Marcisbee/chipolette/issues"
+  },
+  "homepage": "https://github.com/Marcisbee/chipolette#readme",
+  "devDependencies": {
+    "less": "^3.9.0"
+  }
+}

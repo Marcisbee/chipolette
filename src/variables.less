@@ -1,0 +1,588 @@
+:root {
+  /*************************************************************************************************
+  * Core variables
+  *************************************************************************************************/
+
+  /* Fonts */
+  --font-sans-serif: sans-serif;
+  --font-serif: serif;
+  --font-system: system-ui;
+  --font-monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  /* Colors (most courtesy of http://clrs.cc/) */
+  --color-white: white;
+  --color-navy: #001f3f;
+  --color-blue: #0074d9;
+  --color-aqua: #7fdbff;
+  --color-teal: #39cccc;
+  --color-olive: #3d9970;
+  --color-green: #2ecc40;
+  --color-lime: #01ff70;
+  --color-yellow: #ffdc00;
+  --color-orange: #ff851b;
+  --color-red: #ff4136;
+  --color-maroon: #85144b;
+  --color-fuchsia: #f012be;
+  --color-purple: #b10dc9;
+  --color-black: #111;
+  --color-gray: #aaa;
+  --color-silver: #ddd;
+
+  /* Alpha transparent colors */
+  --color-white-alpha-20: rgba(255,255,255,0.2);
+  --color-white-alpha-40: rgba(255,255,255,0.4);
+  --color-white-alpha-60: rgba(255,255,255,0.6);
+  --color-white-alpha-80: rgba(255,255,255,0.8);
+  --color-white-alpha-100: rgba(255,255,255,0.10);
+  --color-black-alpha-20: rgba(0,0,0,0.2);
+  --color-black-alpha-40: rgba(0,0,0,0.4);
+  --color-black-alpha-60: rgba(0,0,0,0.6);
+  --color-black-alpha-80: rgba(0,0,0,0.8);
+  --color-black-alpha-100: rgba(0,0,0,0.10);
+
+  /* Disabled colors */
+  --color-disabled: #777;
+  --color-disabled-bg: #dadada;
+  --color-disabled-border: transparent;
+
+  /* States */
+  --state-default: var(--color-gray);
+  --state-primary: var(--color-blue);
+  --state-success: var(--color-green);
+  --state-info: var(--color-teal);
+  --state-warning: var(--color-orange);
+  --state-danger: var(--color-red);
+  --state-light: var(--color-white);
+  --state-dark: var(--color-black);
+
+  /* Components */
+  --component-bg-color: #f2f2f2;
+  --component-border-color: #ddd;
+  --component-border-radius: .25rem;
+  --component-border-width: 1px;
+  --component-focus-width: 2px;
+  --component-padding-x: 1rem;
+  --component-padding-y: 1rem;
+  --component-speed: .1s;
+  --component-box-shadow-inner: inset 0 1px 1px rgba(0, 0, 0, .05);
+  --component-box-shadow-outer: 0 1px 0 rgba(0, 0, 0, .05);
+
+  /*************************************************************************************************
+  * Alerts
+  *************************************************************************************************/
+
+  --alert-border-radius: var(--component-border-radius);
+  --alert-border-width: 1px;
+  --alert-padding-x: var(--component-padding-x);
+  --alert-padding-y: var(--component-padding-y);
+
+  /* Default */
+  --alert-bg-color: var(--color-silver);
+  --alert-color: var(--color-navy);
+  --alert-border-color: var(--color-black-alpha-20);
+
+  /* Primary */
+  --alert-bg-color-primary: var(--state-primary);
+  --alert-color-primary: var(--color-navy);
+  --alert-border-color-primary: var(--color-black-alpha-20);
+
+  /* Success */
+  --alert-bg-color-success: var(--state-success);
+  --alert-color-success: var(--color-navy);
+  --alert-border-color-success: var(--color-black-alpha-20);
+
+  /* Info */
+  --alert-bg-color-info: var(--state-info);
+  --alert-color-info: var(--color-navy);
+  --alert-border-color-info: var(--color-black-alpha-20);
+
+  /* Warning */
+  --alert-bg-color-warning: var(--state-warning);
+  --alert-color-warning: var(--color-navy);
+  --alert-border-color-warning: var(--color-black-alpha-20);
+
+  /* Danger */
+  --alert-bg-color-danger: var(--state-danger);
+  --alert-color-danger: var(--color-navy);
+  --alert-border-color-danger: var(--color-black-alpha-20);
+
+  /*************************************************************************************************
+  * Badges
+  *************************************************************************************************/
+
+  --badge-font-size: .8em; /* ems for relative sizing */
+  --badge-border-radius: 1em;  /* ems for relative sizing */
+  --badge-focus-width: var(--component-focus-width);
+  --badge-speed: var(--component-speed);
+
+  /* Default */
+  --badge-color: var(--color-navy);
+  --badge-bg-color: var(--color-white);
+  --badge-color-hover: var(--badge-color);
+  --badge-bg-color-hover: var(--badge-bg-color);
+
+  /* Primary */
+  --badge-color-primary: var(--color-white);
+  --badge-bg-color-primary: var(--state-primary);
+  --badge-color-hover-primary: var(--badge-color-primary);
+  --badge-bg-color-hover-primary: var(--badge-bg-color-primary);
+
+  /* success */
+  --badge-color-success: var(--color-white);
+  --badge-bg-color-success: var(--state-success);
+  --badge-color-hover-success: var(--badge-color-success);
+  --badge-bg-color-hover-success: var(--badge-bg-color-success);
+
+  /* info */
+  --badge-color-info: var(--color-white);
+  --badge-bg-color-info: var(--state-info);
+  --badge-color-hover-info: var(--badge-color-info);
+  --badge-bg-color-hover-info: var(--badge-bg-color-info);
+
+  /* warning */
+  --badge-color-warning: var(--color-white);
+  --badge-bg-color-warning: var(--state-warning);
+  --badge-color-hover-warning: var(--badge-color-warning);
+  --badge-bg-color-hover-warning: var(--badge-bg-color-warning);
+
+  /* danger */
+  --badge-color-danger: var(--color-white);
+  --badge-bg-color-danger: var(--state-danger);
+  --badge-color-hover-danger: var(--badge-color-danger);
+  --badge-bg-color-hover-danger: var(--badge-bg-color-danger);
+
+  /*************************************************************************************************
+  * Buttons
+  *************************************************************************************************/
+
+  --button-height-xs: var(--input-height-xs);
+  --button-height-sm: var(--input-height-sm);
+  --button-height: var(--input-height);
+  --button-height-lg: var(--input-height-lg);
+  --button-height-xl: var(--input-height-xl);
+  --button-font-size-xs: var(--input-font-size-xs);
+  --button-font-size-sm: var(--input-font-size-sm);
+  --button-font-size: var(--input-font-size);
+  --button-font-size-lg: var(--input-font-size-lg);
+  --button-font-size-xl: var(--input-font-size-xl);
+  --button-font-family: var(--input-font-family);
+  --button-font-weight: var(--input-font-weight);
+  --button-border-radius: var(--component-border-radius);
+  --button-border-width: var(--component-border-width);
+  --button-focus-width: var(--component-focus-width);
+  --button-speed: var(--component-speed);
+  --button-loader-size: 1em;
+  --button-loader-border-width: .15em;
+
+  /* Default */
+  --button-color: var(--color-navy);
+  --button-bg-color: var(--state-white);
+  --button-border-color: var(--color-black-alpha-40);
+  --button-color-hover: var(--button-color);
+  --button-bg-color-hover: var(--button-bg-color);
+  --button-border-color-hover: var(--button-border-color);
+  --button-color-active: var(--button-color);
+  --button-bg-color-active: var(--button-bg-color);
+  --button-border-color-active: var(--button-border-color);
+  --button-color-disabled: var(--color-disabled);
+  --button-bg-color-disabled: var(--color-disabled-bg);
+  --button-border-color-disabled: var(--color-disabled-border);
+
+  /* Primary */
+  --button-color-primary: var(--color-white);
+  --button-bg-color-primary: var(--state-primary);
+  --button-border-color-primary: var(--color-black-alpha-40);
+  --button-color-hover-primary: var(--button-color-primary);
+  --button-bg-color-hover-primary: var(--button-bg-color-primary);
+  --button-border-color-hover-primary: var(--button-border-color-primary);
+  --button-color-active-primary: var(--button-color-primary);
+  --button-bg-color-active-primary: var(--button-bg-color-primary);
+  --button-border-color-active-primary: var(--button-border-color-primary);
+
+  /* Success */
+  --button-color-success: var(--color-white);
+  --button-bg-color-success: var(--state-success);
+  --button-border-color-success: var(--color-black-alpha-40);
+  --button-color-hover-success: var(--button-color-success);
+  --button-bg-color-hover-success: var(--button-bg-color-success);
+  --button-border-color-hover-success: var(--button-border-color-success);
+  --button-color-active-success: var(--button-color-success);
+  --button-bg-color-active-success: var(--button-bg-color-success);
+  --button-border-color-active-success: var(--button-border-color-success);
+
+  /* Info */
+  --button-color-info: var(--color-white);
+  --button-bg-color-info: var(--state-info);
+  --button-border-color-info: var(--color-black-alpha-40);
+  --button-color-hover-info: var(--button-color-info);
+  --button-bg-color-hover-info: var(--button-bg-color-info);
+  --button-border-color-hover-info: var(--button-border-color-info);
+  --button-color-active-info: var(--button-color-info);
+  --button-bg-color-active-info: var(--button-bg-color-info);
+  --button-border-color-active-info: var(--button-border-color-info);
+
+  /* Warning */
+  --button-color-warning: var(--color-white);
+  --button-bg-color-warning: var(--state-warning);
+  --button-border-color-warning: var(--color-black-alpha-40);
+  --button-color-hover-warning: var(--button-color-warning);
+  --button-bg-color-hover-warning: var(--button-bg-color-warning);
+  --button-border-color-hover-warning: var(--button-border-color-warning);
+  --button-color-active-warning: var(--button-color-warning);
+  --button-bg-color-active-warning: var(--button-bg-color-warning);
+  --button-border-color-active-warning: var(--button-border-color-warning);
+
+  /* Danger */
+  --button-color-danger: var(--color-white);
+  --button-bg-color-danger: var(--state-danger);
+  --button-border-color-danger: var(--color-black-alpha-40);
+  --button-color-hover-danger: var(--button-color-danger);
+  --button-bg-color-hover-danger: var(--button-bg-color-danger);
+  --button-border-color-hover-danger: var(--button-border-color-danger);
+  --button-color-active-danger: var(--button-color-danger);
+  --button-bg-color-active-danger: var(--button-bg-color-danger);
+  --button-border-color-active-danger: var(--button-border-color-danger);
+
+  /*************************************************************************************************
+  * Content
+  *************************************************************************************************/
+
+  --body-bg-color: var(--color-white);
+  --body-color: var(--color-black);
+  --body-color-muted: var(--color-gray);
+
+  --font-family: var(--font-system);
+  --font-size: 1rem; /* Most browsers use a default font size of 16px */
+  --font-size-small: 80%;
+  --font-weight-light: 300;
+  --font-weight: 400;
+  --font-weight-bold: 700;
+  --line-height: 1.5;
+
+  --code-font-size: 90%;
+  --code-color: var(--color-black);
+  --code-border-radius: var(--component-border-radius);
+  --code-bg-color: var(--component-bg-color);
+  --code-padding-x: calc(var(--font-size) * .4);
+  --code-padding-y: calc(var(--font-size) * .2);
+
+  --headings-font-family: var(--font-system);
+  --headings-font-weight: var(--font-weight-light);
+  --headings-line-height: 1.1;
+  --headings-margin-bottom: .5rem;
+  --headings-color: inherit;
+  --headings-font-size-h1: 2.5rem;
+  --headings-font-size-h2: 2rem;
+  --headings-font-size-h3: 1.75rem;
+  --headings-font-size-h4: 1.5rem;
+  --headings-font-size-h5: 1.25rem;
+  --headings-font-size-h6: 1rem;
+
+  --hr-border-width: 1px;
+  --hr-border-color: var(--component-border-color);
+  --hr-margin-x: 0;
+  --hr-margin-y: 2rem;
+
+  --kbd-font-size: 90%;
+  --kbd-color: var(--color-white);
+  --kbd-border-radius: var(--component-border-radius);
+  --kbd-bg-color: var(--color-black);
+  --kbd-padding-x: calc(var(--font-size) * .4);
+  --kbd-padding-y: calc(var(--font-size) * .2);
+
+  --link-color: var(--state-primary);
+  --link-text-decoration: none;
+  --link-color-hover: var(--link-color);
+  --link-text-decoration-hover: underline;
+
+  --mark-color: inherit;
+  --mark-bg-color: var(--color-yellow);
+  --mark-padding-x: calc(var(--font-size) * .4);
+  --mark-padding-y: calc(var(--font-size) * .2);
+
+  --placeholder-color: var(--body-color-muted);
+
+  --pre-color: var(--code-color);
+  --pre-border-radius: var(--component-border-radius);
+  --pre-bg-color: var(--code-bg-color);
+  --pre-max-height: none;
+
+  --selection-color: var(--color-white);
+  --selection-bg-color: var(--state-primary);
+
+  /*************************************************************************************************
+  * Dropdowns
+  *************************************************************************************************/
+
+  --dropdown-min-width: 10rem;
+  --dropdown-max-width: 25rem;
+  --dropdown-max-height: none;
+  --dropdown-border-color: var(--component-border-color);
+  --dropdown-border-radius: var(--component-border-radius);
+  --dropdown-border-width: var(--component-border-width);
+  --dropdown-font-size: inherit;
+  --dropdown-font-weight: inherit;
+  --dropdown-color: var(--body-color);
+  --dropdown-color-hover: var(--color-white);
+  --dropdown-bg-color: var(--color-white);
+  --dropdown-bg-color-hover: var(--state-primary);
+  --dropdown-box-shadow: var(--component-box-shadow-outer);
+  --dropdown-line-height: var(--line-height);
+  --dropdown-padding-x: 1rem;
+  --dropdown-padding-y: .25rem;
+  --dropdown-offset-x: 0;
+  --dropdown-offset-y: 1px;
+  --dropdown-z-index: 100;
+
+  --dropdown-caret-color: currentcolor;
+  --dropdown-caret-size: .5em;
+  --dropdown-caret-width: 2px;
+
+  --dropdown-divider-color: var(--component-border-color);
+  --dropdown-divider-width: var(--component-border-width);
+
+  --dropdown-heading-font-size: var(--font-size-small);
+  --dropdown-heading-font-weight: inherit;
+  --dropdown-heading-color: var(--body-color-muted);
+
+  /*************************************************************************************************
+  * Forms
+  *************************************************************************************************/
+
+  --input-height-xs: 1.25rem;
+  --input-height-sm: 1.75rem;
+  --input-height: 2.25rem;
+  --input-height-lg: 2.75rem;
+  --input-height-xl: 3.25rem;
+  --input-font-size-xs: .625rem;
+  --input-font-size-sm: .875rem;
+  --input-font-size: 1rem;
+  --input-font-size-lg: 1.25rem;
+  --input-font-size-xl: 1.5rem;
+  --input-font-family: inherit;
+  --input-font-weight: inherit;
+  --input-color: var(--body-color);
+  --input-border-color: var(--component-border-color);
+  --input-border-width: 1px;
+  --input-border-radius: var(--component-border-radius);
+  --input-bg-color: var(--color-white);
+  --input-box-shadow: var(--component-box-shadow-inner);
+  --input-readonly-bg-color: var(--component-bg-color);
+  --input-focus-color: var(--state-primary);
+  --input-speed: var(--component-speed);
+
+  --input-addon-bg-color: var(--component-bg-color);
+  --input-addon-color: var(--body-color-muted);
+
+  --input-hint-color: var(--body-color-muted);
+  --input-hint-font-size: var(--font-size-small);
+
+  --input-icon-width: 2em;
+  --input-icon-offset: .5em;
+  --input-icon-color: var(--state-primary);
+
+  --input-range-track-height: .5rem;
+  --input-range-track-color: var(--component-bg-color);
+  --input-range-track-box-shadow: var(--component-box-shadow-inner);
+  --input-range-thumb-height: 1.25rem;
+  --input-range-thumb-color: var(--state-primary);
+
+  --input-invalid-color: var(--state-danger);
+  --input-invalid-border-color: var(--state-danger);
+  --input-valid-color: var(--state-success);
+  --input-valid-border-color: var(--state-success);
+
+  --fieldset-border-color: var(--component-border-color);
+  --fieldset-border-width: var(--component-border-width);
+  --fieldset-border-radius: var(--component-border-radius);
+  --fieldset-padding-x: 2rem;
+  --fieldset-padding-y: 1.5rem;
+
+  --label-color: inherit;
+
+  /*************************************************************************************************
+  * Grid
+  *************************************************************************************************/
+
+  --container-max-width-sm: 540px;
+  --container-max-width-md: 720px;
+  --container-max-width-lg: 960px;
+  --container-max-width-xl: 1140px;
+
+  --grid-gutter-width: 2rem;
+
+  /*************************************************************************************************
+  * Loaders
+  *************************************************************************************************/
+
+  --loader-thickness: .2rem;
+  --loader-thickness-xs: calc(var(--loader-thickness) / 2);
+  --loader-thickness-sm: calc(var(--loader-thickness) / 1.5);
+  --loader-thickness-lg: calc(var(--loader-thickness) * 1.5);
+  --loader-thickness-xl: calc(var(--loader-thickness) * 2);
+  --loader-size-xs: var(--input-height-xs);
+  --loader-size-sm: var(--input-height-sm);
+  --loader-size: var(--input-height);
+  --loader-size-lg: var(--input-height-lg);
+  --loader-size-xl: var(--input-height-xl);
+  --loader-speed: 750ms;
+  --loader-margin-x: .5em;
+  --loader-margin-y: 0;
+
+  /* Default */
+  --loader-color: var(--state-primary);
+
+  /* primary */
+  --loader-color-primary: var(--state-primary);
+
+  /* Success */
+  --loader-color-success: var(--state-success);
+
+  /* Info */
+  --loader-color-info: var(--state-info);
+
+  /* Warning */
+  --loader-color-warning: var(--state-warning);
+
+  /* Danger */
+  --loader-color-danger: var(--state-danger);
+
+  /*************************************************************************************************
+  * Progress Bars
+  *************************************************************************************************/
+
+  --progress-height: var(--input-height);
+  --progress-height-xs: var(--input-height-xs);
+  --progress-height-sm: var(--input-height-sm);
+  --progress-height-lg: var(--input-height-lg);
+  --progress-height-xl: var(--input-height-xl);
+  --progress-font-size: var(--input-font-size);
+  --progress-font-size-xs: var(--input-font-size-xs);
+  --progress-font-size-sm: var(--input-font-size-sm);
+  --progress-font-size-lg: var(--input-font-size-lg);
+  --progress-font-size-xl: var(--input-font-size-xl);
+  --progress-color: var(--color-white);
+  --progress-bg-color: var(--component-bg-color);
+  --progress-bar-color: var(--state-primary);
+  --progress-border-radius: var(--component-border-radius);
+  --progress-box-shadow: var(--component-box-shadow-inner);
+  --progress-speed: var(--component-speed);
+  --progress-speed-indeterminate: 3s;
+
+  /*************************************************************************************************
+  * Switches
+  *************************************************************************************************/
+
+  --switch-height: calc(var(--input-height) * .75);
+  --switch-height-xs: calc(var(--input-height-xs) * .75);
+  --switch-height-sm: calc(var(--input-height-sm) * .75);
+  --switch-height-lg: calc(var(--input-height-lg) * .75);
+  --switch-height-xl: calc(var(--input-height-xl) * .75);
+  --switch-font-size: var(--input-font-size);
+  --switch-font-size-xs: var(--input-font-size-xs);
+  --switch-font-size-sm: var(--input-font-size-sm);
+  --switch-font-size-lg: var(--input-font-size-lg);
+  --switch-font-size-xl: var(--input-font-size-xl);
+  --switch-border-radius: var(--switch-height);
+  --switch-thumb-border-radius: 50%;
+  --switch-thumb-spacing: 2px;
+  --switch-focus-width: var(--component-focus-width);
+  --switch-speed: var(--component-speed);
+
+  /* Default */
+  --switch-color: var(--state-primary);
+  --switch-bg-color: var(--component-border-color);
+  --switch-thumb-color: var(--color-white);
+
+  /* primary */
+  --switch-color-primary: var(--state-primary);
+  --switch-bg-color-primary: var(--component-border-color);
+  --switch-thumb-color-primary: var(--color-white);
+
+  /* Success */
+  --switch-color-success: var(--state-success);
+  --switch-bg-color-success: var(--component-border-color);
+  --switch-thumb-color-success: var(--color-white);
+
+  /* Info */
+  --switch-color-info: var(--state-info);
+  --switch-bg-color-info: var(--component-border-color);
+  --switch-thumb-color-info: var(--color-white);
+
+  /* Warning */
+  --switch-color-warning: var(--state-warning);
+  --switch-bg-color-warning: var(--component-border-color);
+  --switch-thumb-color-warning: var(--color-white);
+
+  /* Danger */
+  --switch-color-danger: var(--state-danger);
+  --switch-bg-color-danger: var(--component-border-color);
+  --switch-thumb-color-danger: var(--color-white);
+
+  /*************************************************************************************************
+  * Tables
+  *************************************************************************************************/
+
+  --table-bg-color: var(--color-white);
+  --table-border-color: var(--component-border-color);
+  --table-border-width: var(--component-border-width);
+  --table-header-bg-color: transparent;
+  --table-spacing-x: .75rem;
+  --table-spacing-y: .5rem;
+  --table-hover-color: var(--color-white);
+  --table-hover-bg-color: var(--state-primary);
+  --table-stripe-bg-color: var(--component-bg-color);
+
+  /*************************************************************************************************
+  * Tabs
+  *************************************************************************************************/
+
+  --tab-bg-color: var(--body-bg-color);
+  --tab-bg-color-hover: var(--body-bg-color);
+  --tab-bg-color-active: var(--link-color);
+  --tab-bg-color-disabled: var(--body-bg-color);
+  --tab-border-radius: var(--component-border-radius);
+  --tab-color: var(--link-color);
+  --tab-color-hover: var(--link-color-hover);
+  --tab-color-active: var(--color-white);
+  --tab-color-disabled: var(--body-color-muted);
+  --tab-padding-x: var(--component-padding-x);
+  --tab-padding-y: calc(var(--component-padding-y) / 2);
+  --tab-speed: var(--component-speed);
+
+  --tab-pane-border-color: var(--component-border-color);
+  --tab-pane-border-radius: var(--component-border-radius);
+  --tab-pane-border-width: var(--component-border-width);
+  --tab-pane-padding-x: var(--component-padding-x);
+  --tab-pane-padding-y: var(--component-padding-y);
+
+  /*************************************************************************************************
+  * Utilities
+  *************************************************************************************************/
+
+  --spacing-xs: .5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+}
+
+
+/* Core breakpoints */
+@breakpoint-xs-up: ~'only screen and (min-width: 0)';
+@breakpoint-sm-up: ~'only screen and (min-width: 576px)';
+@breakpoint-md-up: ~'only screen and (min-width: 768px)';
+@breakpoint-lg-up: ~'only screen and (min-width: 992px)';
+@breakpoint-xl-up: ~'only screen and (min-width: 1200px)';
+
+@breakpoint-xs-down: ~'only screen and (max-width: 575px)';
+@breakpoint-sm-down: ~'only screen and (max-width: 767px)';
+@breakpoint-md-down: ~'only screen and (max-width: 991px)';
+@breakpoint-lg-down: ~'only screen and (max-width: 1199px)';
+@breakpoint-xl-down: ~'only screen and (min-width: 0)';
+
+@breakpoint-xs-only: ~'only screen and (min-width: 0) and (max-width: 575px)';
+@breakpoint-sm-only: ~'only screen and (min-width: 576px) and (max-width: 767px)';
+@breakpoint-md-only: ~'only screen and (min-width: 768px) and (max-width: 991px)';
+@breakpoint-lg-only: ~'only screen and (min-width: 992px) and (max-width: 1199px)';
+@breakpoint-xl-only: ~'only screen and (min-width: 1200px)';

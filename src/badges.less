@@ -1,0 +1,92 @@
+/*! Badges */
+
+.badge {
+  font-size: var(--badge-font-size);
+  color: var(--badge-color);
+  background-color: var(--badge-bg-color);
+  border-radius: var(--badge-border-radius);
+  padding: .2em .6em;
+  vertical-align: baseline;
+  display: inline-block;
+  transition: var(--badge-speed) all;
+
+  &:empty {
+    display: none;
+  }
+
+  /* Variations */
+  &.intent-primary {
+    color: var(--badge-color-primary);
+    background-color: var(--badge-bg-color-primary);
+  }
+
+  &.intent-success {
+    color: var(--badge-color-success);
+    background-color: var(--badge-bg-color-success);
+  }
+
+  &.intent-info {
+    color: var(--badge-color-info);
+    background-color: var(--badge-bg-color-info);
+  }
+
+  &.intent-warning {
+    color: var(--badge-color-warning);
+    background-color: var(--badge-bg-color-warning);
+  }
+
+  &.intent-danger {
+    color: var(--badge-color-danger);
+    background-color: var(--badge-bg-color-danger);
+  }
+
+  &.intent-light {
+    color: var(--badge-color-light);
+    background-color: var(--badge-bg-color-light);
+  }
+
+  &.intent-dark {
+    color: var(--badge-color-dark);
+    background-color: var(--badge-bg-color-dark);
+  }
+}
+
+/* Badge links */
+a.badge {
+  &:hover {
+    color: var(--badge-color);
+    background-color: var(--badge-bg-color-hover);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.intent-primary:hover {
+    color: var(--badge-color-primary);
+    background-color: var(--badge-bg-color-hover-primary);
+  }
+
+  &.intent-success:hover {
+    color: var(--badge-color-success);
+    background-color: var(--badge-bg-color-hover-success);
+  }
+
+  &.intent-info:hover {
+    color: var(--badge-color-info);
+    background-color: var(--badge-bg-color-hover-info);
+  }
+
+  &.intent-warning:hover {
+    color: var(--badge-color-warning);
+    background-color: var(--badge-bg-color-hover-warning);
+  }
+
+  &.intent-danger:hover {
+    color: var(--badge-color-danger);
+    background-color: var(--badge-bg-color-hover-danger);
+  }
+
+}

@@ -3996,8 +3996,7 @@ input[type="range"]:focus::-ms-fill-upper {
     margin-left: 91.666667%;
   }
 }
-/*
-List groups
+/*! List groups
 
 Markup:
 <div class="list-group">
@@ -4182,25 +4181,7 @@ Markup:
     transform: rotate(360deg);
   }
 }
-/*
-Navbars
-
-Markup:
-<nav class="navbar">
-  <div class="navbar-group align-left">
-    <div class="navbar-heading">Chipolette</div>
-    <input class="input" placeholder="Search files..." type="text" />
-  </div>
-  <div class="navbar-group align-right">
-    <button class="button minimal icon-home">Home</button>
-    <button class="button minimal icon-document">Files</button>
-    <span class="navbar-divider"></span>
-    <button class="button minimal icon-user"></button>
-    <button class="button minimal icon-notifications"></button>
-    <button class="button minimal icon-cog"></button>
-  </div>
-</nav>
-*/
+/*! Navbars */
 .navbar {
   position: relative;
   z-index: 10;
@@ -4775,290 +4756,290 @@ table.table-striped tr:nth-child(odd) td {
 /***************************************************************************************************
 * Spacing utilities
 ***************************************************************************************************/
-.pad-0 {
+.p-0 {
   padding: 0 !important;
 }
-.pad-x-0 {
+.px-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.pad-y-0 {
+.py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.pad-t-0 {
+.pt-0 {
   padding-top: 0 !important;
 }
-.pad-r-0 {
+.pr-0 {
   padding-right: 0 !important;
 }
-.pad-b-0 {
+.pb-0 {
   padding-bottom: 0 !important;
 }
-.pad-l-0 {
+.pl-0 {
   padding-left: 0 !important;
 }
-.pad-xs {
+.p-xs {
   padding: var(--spacing-xs) !important;
 }
-.pad-x-xs {
+.px-xs {
   padding-left: var(--spacing-xs) !important;
   padding-right: var(--spacing-xs) !important;
 }
-.pad-y-xs {
+.py-xs {
   padding-top: var(--spacing-xs) !important;
   padding-bottom: var(--spacing-xs) !important;
 }
-.pad-t-xs {
+.pt-xs {
   padding-top: var(--spacing-xs) !important;
 }
-.pad-r-xs {
+.pr-xs {
   padding-right: var(--spacing-xs) !important;
 }
-.pad-b-xs {
+.pb-xs {
   padding-bottom: var(--spacing-xs) !important;
 }
-.pad-l-xs {
+.pl-xs {
   padding-left: var(--spacing-xs) !important;
 }
-.pad-sm {
+.p-sm {
   padding: var(--spacing-sm) !important;
 }
-.pad-x-sm {
+.px-sm {
   padding-left: var(--spacing-sm) !important;
   padding-right: var(--spacing-sm) !important;
 }
-.pad-y-sm {
+.py-sm {
   padding-top: var(--spacing-sm) !important;
   padding-bottom: var(--spacing-sm) !important;
 }
-.pad-t-sm {
+.pt-sm {
   padding-top: var(--spacing-sm) !important;
 }
-.pad-r-sm {
+.pr-sm {
   padding-right: var(--spacing-sm) !important;
 }
-.pad-b-sm {
+.pb-sm {
   padding-bottom: var(--spacing-sm) !important;
 }
-.pad-l-sm {
+.pl-sm {
   padding-left: var(--spacing-sm) !important;
 }
-.pad-md {
+.p-md {
   padding: var(--spacing-md) !important;
 }
-.pad-x-md {
+.px-md {
   padding-left: var(--spacing-md) !important;
   padding-right: var(--spacing-md) !important;
 }
-.pad-y-md {
+.py-md {
   padding-top: var(--spacing-md) !important;
   padding-bottom: var(--spacing-md) !important;
 }
-.pad-t-md {
+.pt-md {
   padding-top: var(--spacing-md) !important;
 }
-.pad-r-md {
+.pr-md {
   padding-right: var(--spacing-md) !important;
 }
-.pad-b-md {
+.pb-md {
   padding-bottom: var(--spacing-md) !important;
 }
-.pad-l-md {
+.pl-md {
   padding-left: var(--spacing-md) !important;
 }
-.pad-lg {
+.p-lg {
   padding: var(--spacing-lg) !important;
 }
-.pad-x-lg {
+.px-lg {
   padding-left: var(--spacing-lg) !important;
   padding-right: var(--spacing-lg) !important;
 }
-.pad-y-lg {
+.py-lg {
   padding-top: var(--spacing-lg) !important;
   padding-bottom: var(--spacing-lg) !important;
 }
-.pad-t-lg {
+.pt-lg {
   padding-top: var(--spacing-lg) !important;
 }
-.pad-r-lg {
+.pr-lg {
   padding-right: var(--spacing-lg) !important;
 }
-.pad-b-lg {
+.pb-lg {
   padding-bottom: var(--spacing-lg) !important;
 }
-.pad-l-lg {
+.pl-lg {
   padding-left: var(--spacing-lg) !important;
 }
-.pad-xl {
+.p-xl {
   padding: var(--spacing-xl) !important;
 }
-.pad-x-xl {
+.px-xl {
   padding-left: var(--spacing-xl) !important;
   padding-right: var(--spacing-xl) !important;
 }
-.pad-y-xl {
+.py-xl {
   padding-top: var(--spacing-xl) !important;
   padding-bottom: var(--spacing-xl) !important;
 }
-.pad-t-xl {
+.pt-xl {
   padding-top: var(--spacing-xl) !important;
 }
-.pad-r-xl {
+.pr-xl {
   padding-right: var(--spacing-xl) !important;
 }
-.pad-b-xl {
+.pb-xl {
   padding-bottom: var(--spacing-xl) !important;
 }
-.pad-l-xl {
+.pl-xl {
   padding-left: var(--spacing-xl) !important;
 }
-.mar-0 {
+.m-0 {
   margin: 0 !important;
 }
-.mar-x-0 {
+.mx-0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.mar-y-0 {
+.my-0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.mar-t-0 {
+.mt-0 {
   margin-top: 0 !important;
 }
-.mar-r-0 {
+.mr-0 {
   margin-right: 0 !important;
 }
-.mar-b-0 {
+.mb-0 {
   margin-bottom: 0 !important;
 }
-.mar-l-0 {
+.ml-0 {
   margin-left: 0 !important;
 }
-.mar-xs {
+.m-xs {
   margin: var(--spacing-xs) !important;
 }
-.mar-x-xs {
+.mx-xs {
   margin-left: var(--spacing-xs) !important;
   margin-right: var(--spacing-xs) !important;
 }
-.mar-y-xs {
+.my-xs {
   margin-top: var(--spacing-xs) !important;
   margin-bottom: var(--spacing-xs) !important;
 }
-.mar-t-xs {
+.mt-xs {
   margin-top: var(--spacing-xs) !important;
 }
-.mar-r-xs {
+.mr-xs {
   margin-right: var(--spacing-xs) !important;
 }
-.mar-b-xs {
+.mb-xs {
   margin-bottom: var(--spacing-xs) !important;
 }
-.mar-l-xs {
+.ml-xs {
   margin-left: var(--spacing-xs) !important;
 }
-.mar-sm {
+.m-sm {
   margin: var(--spacing-sm) !important;
 }
-.mar-x-sm {
+.mx-sm {
   margin-left: var(--spacing-sm) !important;
   margin-right: var(--spacing-sm) !important;
 }
-.mar-y-sm {
+.my-sm {
   margin-top: var(--spacing-sm) !important;
   margin-bottom: var(--spacing-sm) !important;
 }
-.mar-t-sm {
+.mt-sm {
   margin-top: var(--spacing-sm) !important;
 }
-.mar-r-sm {
+.mr-sm {
   margin-right: var(--spacing-sm) !important;
 }
-.mar-b-sm {
+.mb-sm {
   margin-bottom: var(--spacing-sm) !important;
 }
-.mar-l-sm {
+.ml-sm {
   margin-left: var(--spacing-sm) !important;
 }
-.mar-md {
+.m-md {
   margin: var(--spacing-md) !important;
 }
-.mar-x-md {
+.mx-md {
   margin-left: var(--spacing-md) !important;
   margin-right: var(--spacing-md) !important;
 }
-.mar-y-md {
+.my-md {
   margin-top: var(--spacing-md) !important;
   margin-bottom: var(--spacing-md) !important;
 }
-.mar-t-md {
+.mt-md {
   margin-top: var(--spacing-md) !important;
 }
-.mar-r-md {
+.mr-md {
   margin-right: var(--spacing-md) !important;
 }
-.mar-b-md {
+.mb-md {
   margin-bottom: var(--spacing-md) !important;
 }
-.mar-l-md {
+.ml-md {
   margin-left: var(--spacing-md) !important;
 }
-.mar-lg {
+.m-lg {
   margin: var(--spacing-lg) !important;
 }
-.mar-x-lg {
+.mx-lg {
   margin-left: var(--spacing-lg) !important;
   margin-right: var(--spacing-lg) !important;
 }
-.mar-y-lg {
+.my-lg {
   margin-top: var(--spacing-lg) !important;
   margin-bottom: var(--spacing-lg) !important;
 }
-.mar-t-lg {
+.mt-lg {
   margin-top: var(--spacing-lg) !important;
 }
-.mar-r-lg {
+.mr-lg {
   margin-right: var(--spacing-lg) !important;
 }
-.mar-b-lg {
+.mb-lg {
   margin-bottom: var(--spacing-lg) !important;
 }
-.mar-l-lg {
+.ml-lg {
   margin-left: var(--spacing-lg) !important;
 }
-.mar-xl {
+.m-xl {
   margin: var(--spacing-xl) !important;
 }
-.mar-x-xl {
+.mx-xl {
   margin-left: var(--spacing-xl) !important;
   margin-right: var(--spacing-xl) !important;
 }
-.mar-y-xl {
+.my-xl {
   margin-top: var(--spacing-xl) !important;
   margin-bottom: var(--spacing-xl) !important;
 }
-.mar-t-xl {
+.mt-xl {
   margin-top: var(--spacing-xl) !important;
 }
-.mar-r-xl {
+.mr-xl {
   margin-right: var(--spacing-xl) !important;
 }
-.mar-b-xl {
+.mb-xl {
   margin-bottom: var(--spacing-xl) !important;
 }
-.mar-l-xl {
+.ml-xl {
   margin-left: var(--spacing-xl) !important;
 }
-.mar-x-auto {
+.mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.mar-y-auto {
+.my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
 }
-.mar-xy-auto {
+.mxy-auto {
   margin: auto !important;
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/chipolette.less",
   "scripts": {
-    "build": "lessc src/chipolette.less dist/chipolette.css"
+    "dev": "lessc src/chipolette.less dist/chipolette.css",
+    "build": "npm run dev && npm run compress",
+    "compress": "cleancss --level 2 -o dist/chipolette.min.css dist/chipolette.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Marcisbee/chipolette#readme",
   "devDependencies": {
+    "clean-css-cli": "^4.2.1",
     "less": "^3.9.0"
   }
 }

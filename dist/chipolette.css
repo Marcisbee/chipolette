@@ -457,6 +457,18 @@ template {
   --component-box-shadow-outer: 0 1px 0 rgba(0, 0, 0, 0.05);
   /* Borders */
   --border-radius: 0.18rem;
+  /* Margins */
+  --margin-xs: 0.25rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 1.5rem;
+  --margin-xl: 3rem;
+  /* Paddings */
+  --padding-xs: 0.25rem;
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 3rem;
   /*************************************************************************************************
   * Alerts
   *************************************************************************************************/

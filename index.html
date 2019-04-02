@@ -7,14 +7,14 @@
     <title>Chipolette a tiny CSS framework</title>
     <meta name="description" content="Starter kit fork from Shoelace and Bootstrap, that fully embraces CSS variables / custom properties">
     <link rel="icon" href="./assets/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" />
+    <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" />
     <link rel="stylesheet" href="./docs.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans:400|Bitter:700" />
   </head>
   <body>
     <header id="header">
-      <img class="mar-b-md" src="./assets/logo.png" alt="Chipolette" />
+      <img class="mb-md" src="./assets/logo.png" alt="Chipolette" />
       <p><b>Chipolette</b> is a tiny CSS framework / Starter kit.</p>
       <p>It’s a fork from Shoelace and Bootstrap, that fully embraces CSS variables / custom properties.</p>
     </header>
@@ -41,7 +41,7 @@
           <p>We can just defined variables in runtime or set prefedined ones, to change whole color scheme (buttons, links,
             background, margins etc.)</p>
           
-          <pre class="mar-b-md"><code class="language-css">/* Just change every available variable to your disire */
+          <pre class="mb-md"><code class="language-css">/* Just change every available variable to your disire */
 :root {
     --state-primary: #ef7310;
     --state-warning: #ffc31b;
@@ -56,19 +56,19 @@
           <h2 id="installation">Installation</h2>
           <p>To install the stable version:</p>
           
-          <pre class="mar-b-md"><code class="language-bash">npm install --save chipolette</code></pre>
+          <pre class="mb-md"><code class="language-bash">npm install --save chipolette</code></pre>
 
           <p>and just import LESS version like so</p>
           
-          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';
+          <pre class="mb-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';
 // or CSS version
-@import '../node_modules/chipolette/dist/chipolette.css';</code></pre>
+@import '../node_modules/chipolette/dist/chipolette.min.css';</code></pre>
           
           <p>This assumes you are using <a href="https://www.npmjs.com/" target="_blank">npm</a> as your package manager.</p>
           
-          <p>If you’re not, you can <a href="https://unpkg.com/chipolette@latest/dist/chipolette.css" target="_blank">access it on unpkg</a> like so</p>
+          <p>If you’re not, you can <a href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" target="_blank">access it on unpkg</a> like so</p>
           
-          <pre class="mar-b-md"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" /&gt;</code></pre>
+          <pre class="mb-md"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" /&gt;</code></pre>
 
           <h4>Browser Compatibility</h4>
           <p>Every evergreen browser and older ones that support CSS variables. But for older IE versions (and other outdated
@@ -76,7 +76,7 @@
 
           <h2 id="buttons">Buttons</h2>
 
-          <div class="card mar-b-md">
+          <div class="card mb-md">
             <div class="card-body">
               <button type="button" class="btn-xs">XS Button</button>
               <button type="button" class="btn-sm">SM Button</button>
@@ -151,7 +151,7 @@
             </div>
           </div>
 
-          <pre class="mar-b-md"><code class="language-html">&lt;button disabled class="btn-primary btn-loader">test&lt;/button&gt;
+          <pre class="mb-md"><code class="language-html">&lt;button disabled class="btn-primary btn-loader">test&lt;/button&gt;
 &lt;button class="btn-primary btn-loader"&gt;test&lt;/button&gt;
 &lt;button class="btn-primary"&gt;primary&lt;/button&gt;
 &lt;button class="btn-primary active"&gt;primary&lt;/button&gt;
@@ -159,7 +159,7 @@
 
           <h2 id="navbars">Navbars</h2>
 
-          <div class="card mar-b-md">
+          <div class="card mb-md">
             <div class="card-body">
               <nav class="navbar">
                 <div class="navbar-group align-left">
@@ -177,7 +177,7 @@
             </div>
           </div>
 
-          <pre class="mar-b-md"><code class="language-html">&lt;nav class="navbar"&gt;
+          <pre class="mb-md"><code class="language-html">&lt;nav class="navbar"&gt;
   &lt;div class="navbar-group align-left"&gt;
     &lt;div class="navbar-heading"&gt;Chipolette&lt;/div&gt;
     &lt;input class="input" placeholder="Search files..." type="text" /&gt;
@@ -197,7 +197,7 @@
 
           <h2 id="alerts">Alerts</h2>
 
-          <div class="card mar-b-md">
+          <div class="card mb-md">
             <div class="card-body">
               <div class="alert">Primary</div>
               <div class="alert alert-primary">Secondary</div>
@@ -208,7 +208,7 @@
             </div>
           </div>
 
-          <pre class="mar-b-md"><code class="language-html">&lt;div class="alert">Primary&lt;/div&gt;
+          <pre class="mb-md"><code class="language-html">&lt;div class="alert">Primary&lt;/div&gt;
 &lt;div class="alert alert-primary"&gt;Secondary&lt;/div&gt;
 &lt;div class="alert alert-success"&gt;Success&lt;/div&gt;
 &lt;div class="alert alert-info"&gt;Info&lt;/div&gt;
@@ -218,7 +218,7 @@
       </div>
     </div>
     
-    <footer class="mar-t-xl text-center text-muted text-small">
+    <footer class="mt-xl text-center text-muted text-small">
       <div class="container">
 
         <p class="mar-y-sm text-center">
@@ -230,7 +230,7 @@
             data-size="large" aria-label="Fork Marcisbee/chipolette on GitHub">Fork</a>
         </p>
         
-        <hr class="mar-b-md"/>
+        <hr class="mb-md"/>
         <p>Copyright (c) 2019-present, Marcis (Marcisbee) Bergmanis</p>
       </div>
     </footer>

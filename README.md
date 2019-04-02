@@ -1,4 +1,4 @@
-# <img src='https://rawgit.com/Marcisbee/chipolette/assets/logo.png' height='60' alt='Chipolette' />
+# <img src='./assets/logo.png' height='90' alt='Chipolette' />
 
 **Chipolette** is a tiny CSS framework / Starter kit.
 

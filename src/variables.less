@@ -899,3 +899,8 @@
 @breakpoint-md-only: ~'only screen and (min-width: 768px) and (max-width: 991px)';
 @breakpoint-lg-only: ~'only screen and (min-width: 992px) and (max-width: 1199px)';
 @breakpoint-xl-only: ~'only screen and (min-width: 1200px)';
+
+@breakpoint-mobile: @breakpoint-sm-down;
+@breakpoint-tablet: @breakpoint-md-only;
+@breakpoint-laptop: @breakpoint-lg-only;
+@breakpoint-dekstop: @breakpoint-xl-only;

@@ -1,17 +1,32 @@
 :root {
   --body-bg-color: #eee6e1;
   --body-color: #6d5346;
-  --font-system: Tahoma;
+  --font-system: 'Open Sans';
   --hr-border-color: #ded1cc;
+  --link-color: #ef7310;
+  --link-color-hover: #d55528;
+  --headings-color: #502513;
+  --headings-margin-bottom: var(--margin-lg);
+  --headings-font-weight: 700;
+  --headings-font-family: 'Bitter';
+  --state-primary: #ef7310;
+  --state-warning: #ffc31b;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #ded1cd;
+  padding-bottom: var(--margin-sm);
 }
 
 #header {
-  height: 88vh;
+  height: 40vh;
   text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  margin-bottom: 5rem;
 }
 
 #header img {
-  margin-top: 30vh;
+  margin-top: 7vh;
   width: 370px;
   max-width: 90%;
 }
@@ -20,4 +35,9 @@
   width: 500px;
   max-width: 90%;
   margin: 0 auto 0.8rem;
+}
+
+.menu {
+  border-right: 2px solid #ded1cd;
+  padding-right: 20px;
 }

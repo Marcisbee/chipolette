@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" />
     <link rel="stylesheet" href="./docs.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans:400|Bitter:700" />
   </head>
   <body>
     <header id="header">
@@ -23,14 +23,15 @@
       <div class="row">
         <div class="col col-sm-3">
           <div class="menu">
-            <a href="#motivation" class="btn btn-block btn-link text-left">Motivation</a>
-            <a href="#installation" class="btn btn-block btn-link text-left">Installation</a>
-            <a href="#buttons" class="btn btn-block btn-link text-left">Buttons</a>
-            <a href="#navbar" class="btn btn-block btn-link text-left">Navbar</a>
+            <a href="#motivation" class="btn btn-block btn-link text-right">Motivation</a>
+            <a href="#installation" class="btn btn-block btn-link text-right">Installation</a>
+            <a href="#buttons" class="btn btn-block btn-link text-right">Buttons</a>
+            <a href="#navbars" class="btn btn-block btn-link text-right">Navbars</a>
+            <a href="#alerts" class="btn btn-block btn-link text-right">Alerts</a>
           </div>
         </div>
         <div class="col col-sm-9">
-          <h2>Motivation</h2>
+          <h2 id="motivation">Motivation</h2>
           <p>No compilation required to change colors / sizes etc. Well that is if you don’t want to compile. It’s still written
             in
             LESS, because of nesting and other neat features that eases development of Chipolette.</p>
@@ -42,11 +43,14 @@
           
           <pre class="mar-b-md"><code class="language-css">/* Just change every available variable to your disire */
 :root {
-    --body-bg-color: #eee6e1;
-    --body-color: #6d5346;
-    --font-system: Tahoma;
-    --hr-border-color: #ded1cc;
+    --state-primary: #ef7310;
+    --state-warning: #ffc31b;
     ...
+    --body-color: #6d5346;
+    --body-bg-color: #eee6e1;
+    --font-system: 'Open Sans';
+    --headings-font-family: 'Bitter';
+    --headings-margin-bottom: var(--margin-md);
 }</code></pre>
           
           <h2 id="installation">Installation</h2>
@@ -56,12 +60,10 @@
 
           <p>and just import LESS version like so</p>
           
-          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';</code></pre>
+          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';
+// or CSS version
+@import '../node_modules/chipolette/dist/chipolette.css';</code></pre>
           
-          <p>or CSS version</p>
-          
-          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/dist/chipolette.css';</code></pre>
-
           <p>This assumes you are using <a href="https://www.npmjs.com/" target="_blank">npm</a> as your package manager.</p>
           
           <p>If you’re not, you can <a href="https://unpkg.com/chipolette@latest/dist/chipolette.css" target="_blank">access it on unpkg</a> like so</p>
@@ -73,8 +75,6 @@
           browsers) there is a polyfill.</p>
 
           <h2 id="buttons">Buttons</h2>
-
-          <br/>
 
           <div class="card mar-b-md">
             <div class="card-body">
@@ -157,9 +157,7 @@
 &lt;button class="btn-primary active"&gt;primary&lt;/button&gt;
 &lt;button class="btn-primary disabled"&gt;primary&lt;/button&gt;</code></pre>
 
-          <h2 id="navbar">Navbar</h2>
-
-          <br/>
+          <h2 id="navbars">Navbars</h2>
 
           <div class="card mar-b-md">
             <div class="card-body">
@@ -196,6 +194,26 @@
       &lt;i class="material-icons text-lg"&gt;settings&lt;/i&gt;&lt;/button&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
+
+          <h2 id="alerts">Alerts</h2>
+
+          <div class="card mar-b-md">
+            <div class="card-body">
+              <div class="alert">Primary</div>
+              <div class="alert alert-primary">Secondary</div>
+              <div class="alert alert-success">Success</div>
+              <div class="alert alert-info">Info</div>
+              <div class="alert alert-warning">Warning</div>
+              <div class="alert alert-danger">Danger</div>
+            </div>
+          </div>
+
+          <pre class="mar-b-md"><code class="language-html">&lt;div class="alert">Primary&lt;/div&gt;
+&lt;div class="alert alert-primary"&gt;Secondary&lt;/div&gt;
+&lt;div class="alert alert-success"&gt;Success&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;Info&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Warning&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;Danger&lt;/div&gt;</code></pre>
         </div>
       </div>
     </div>

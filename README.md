@@ -29,7 +29,7 @@ and just import LESS version like so
 or CSS version
 
 ```css
-@import '../node_modules/chipolette/css/chipolette.css';
+@import '../node_modules/chipolette/dist/chipolette.css';
 ```
 
 This assumes you are using [npm](https://www.npmjs.com/) as your package manager.  

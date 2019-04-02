@@ -2853,11 +2853,11 @@ input[type="range"]:focus::-ms-fill-upper {
   color: var(--radio-color-checked);
   background-color: var(--radio-bg-checked);
 }
-.radio:focus label::before,
+.radio label:focus::before,
 .radio:hover label::before {
   background-color: var(--radio-bg-hover);
 }
-.radio:focus input:checked:not(:disabled) ~ label::before,
+.radio input:checked:focus:not(:disabled) ~ label::before,
 .radio:hover input:checked:not(:disabled) ~ label::before {
   box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
 }

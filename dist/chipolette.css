@@ -2128,10 +2128,10 @@ ul ul {
 }
 /*! Forms */
 fieldset {
-  border: solid var(--fieldset-border-width) var(--fieldset-border-color);
-  border-radius: var(--fieldset-border-radius);
-  padding: var(--fieldset-padding-y) var(--fieldset-padding-x);
-  margin-bottom: 1.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
 }
 fieldset legend {
   font-weight: var(--font-weight-bold);

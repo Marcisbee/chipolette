@@ -1,0 +1,23 @@
+:root {
+  --body-bg-color: #eee6e1;
+  --body-color: #6d5346;
+  --font-system: Tahoma;
+  --hr-border-color: #ded1cc;
+}
+
+#header {
+  height: 88vh;
+  text-align: center;
+}
+
+#header img {
+  margin-top: 30vh;
+  width: 370px;
+  max-width: 90%;
+}
+
+#header p {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto 0.8rem;
+}

@@ -451,10 +451,12 @@ input[type="range"] {
     }
   }
 
+  &:focus label::before,
   &:hover label::before {
     background-color: var(--checkbox-bg-hover);
   }
 
+  &:focus input:checked:not(:disabled) ~ label::before,
   &:hover input:checked:not(:disabled) ~ label::before {
     box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
   }
@@ -665,10 +667,12 @@ input[type="range"] {
     }
   }
 
+  &:focus label::before,
   &:hover label::before {
     background-color: var(--radio-bg-hover);
   }
 
+  &:focus input:checked:not(:disabled) ~ label::before,
   &:hover input:checked:not(:disabled) ~ label::before {
     box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
   }

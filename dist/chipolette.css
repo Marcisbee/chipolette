@@ -2677,9 +2677,11 @@ input[type="range"]:focus::-ms-fill-upper {
   color: var(--checkbox-color-checked);
   background-color: var(--checkbox-bg-checked);
 }
+.checkbox:focus label::before,
 .checkbox:hover label::before {
   background-color: var(--checkbox-bg-hover);
 }
+.checkbox:focus input:checked:not(:disabled) ~ label::before,
 .checkbox:hover input:checked:not(:disabled) ~ label::before {
   box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
 }
@@ -2851,9 +2853,11 @@ input[type="range"]:focus::-ms-fill-upper {
   color: var(--radio-color-checked);
   background-color: var(--radio-bg-checked);
 }
+.radio:focus label::before,
 .radio:hover label::before {
   background-color: var(--radio-bg-hover);
 }
+.radio:focus input:checked:not(:disabled) ~ label::before,
 .radio:hover input:checked:not(:disabled) ~ label::before {
   box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
 }

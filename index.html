@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" />
     <link rel="stylesheet" href="./docs.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   </head>
   <body>
     <header id="header">
@@ -19,18 +20,205 @@
     </header>
 
     <div class="container">
-      <h1>Chipolette</h1>
-      <p>asd</p>
-      <button>asd</button>
-      <pre><code class="language-css">p { color: red }</code></pre>
+      <div class="row">
+        <div class="col col-sm-3">
+          <div class="menu">
+            <a href="#motivation" class="btn btn-block btn-link text-left">Motivation</a>
+            <a href="#installation" class="btn btn-block btn-link text-left">Installation</a>
+            <a href="#buttons" class="btn btn-block btn-link text-left">Buttons</a>
+            <a href="#navbar" class="btn btn-block btn-link text-left">Navbar</a>
+          </div>
+        </div>
+        <div class="col col-sm-9">
+          <h2>Motivation</h2>
+          <p>No compilation required to change colors / sizes etc. Well that is if you don’t want to compile. It’s still written
+            in
+            LESS, because of nesting and other neat features that eases development of Chipolette.</p>
+          
+          <p>It is designed to replace Bootstrap and to be used with CSS variables.</p>
+          
+          <p>We can just defined variables in runtime or set prefedined ones, to change whole color scheme (buttons, links,
+            background, margins etc.)</p>
+          
+          <pre class="mar-b-md"><code class="language-css">/* Just change every available variable to your disire */
+:root {
+    --body-bg-color: #eee6e1;
+    --body-color: #6d5346;
+    --font-system: Tahoma;
+    --hr-border-color: #ded1cc;
+    ...
+}</code></pre>
+          
+          <h2 id="installation">Installation</h2>
+          <p>To install the stable version:</p>
+          
+          <pre class="mar-b-md"><code class="language-bash">npm install --save chipolette</code></pre>
+
+          <p>and just import LESS version like so</p>
+          
+          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';</code></pre>
+          
+          <p>or CSS version</p>
+          
+          <pre class="mar-b-md"><code class="language-css">@import '../node_modules/chipolette/dist/chipolette.css';</code></pre>
+
+          <p>This assumes you are using <a href="https://www.npmjs.com/" target="_blank">npm</a> as your package manager.</p>
+          
+          <p>If you’re not, you can <a href="https://unpkg.com/chipolette@latest/dist/chipolette.css" target="_blank">access it on unpkg</a> like so</p>
+          
+          <pre class="mar-b-md"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" /&gt;</code></pre>
+
+          <h4>Browser Compatibility</h4>
+          <p>Every evergreen browser and older ones that support CSS variables. But for older IE versions (and other outdated
+          browsers) there is a polyfill.</p>
+
+          <h2 id="buttons">Buttons</h2>
+
+          <br/>
+
+          <div class="card mar-b-md">
+            <div class="card-body">
+              <button type="button" class="btn-xs">XS Button</button>
+              <button type="button" class="btn-sm">SM Button</button>
+              <button type="button">Default Button</button>
+              <button type="button" class="btn-lg">LG Button</button>
+              <button type="button" class="btn-xl">XL Button</button>
+              <br />
+              <br />
+              <button disabled class="btn-primary btn-loader">test</button>
+              <button class="btn-primary btn-loader">test</button>
+              <button class="btn-primary">primary</button>
+              <button class="btn-primary active">primary</button>
+              <button class="btn-primary disabled">primary</button>
+              <br />
+              <br />
+              <button disabled class="btn-secondary btn-loader">test</button>
+              <button class="btn-secondary btn-loader">test</button>
+              <button class="btn-secondary">secondary</button>
+              <button class="btn-secondary active">secondary</button>
+              <button class="btn-secondary disabled">secondary</button>
+              <br />
+              <br />
+              <button disabled class="btn-success btn-loader">test</button>
+              <button class="btn-success btn-loader">test</button>
+              <button class="btn-success">success</button>
+              <button class="btn-success active">success</button>
+              <button class="btn-success disabled">success</button>
+              <br />
+              <br />
+              <button disabled class="btn-info btn-loader">test</button>
+              <button class="btn-info btn-loader">test</button>
+              <button class="btn-info">info</button>
+              <button class="btn-info active">info</button>
+              <button class="btn-info disabled">info</button>
+              <br />
+              <br />
+              <button disabled class="btn-warning btn-loader">test</button>
+              <button class="btn-warning btn-loader">test</button>
+              <button class="btn-warning">warning</button>
+              <button class="btn-warning active">warning</button>
+              <button class="btn-warning disabled">warning</button>
+              <br />
+              <br />
+              <button disabled class="btn-danger btn-loader">test</button>
+              <button class="btn-danger btn-loader">test</button>
+              <button class="btn-danger">danger</button>
+              <button class="btn-danger active">danger</button>
+              <button class="btn-danger disabled">danger</button>
+              <br />
+              <br />
+              <button disabled class="btn-light btn-loader">asd</button>
+              <button class="btn-light btn-loader">asd</button>
+              <button class="btn-light">asd</button>
+              <button class="btn-light active">asd</button>
+              <button class="btn-light disabled">asd</button>
+              <br />
+              <br />
+              <button disabled class="btn-dark btn-loader">asd</button>
+              <button class="btn-dark btn-loader">asd</button>
+              <button class="btn-dark">asd</button>
+              <button class="btn-dark active">asd</button>
+              <button class="btn-dark disabled">asd</button>
+              <br />
+              <br />
+              <button disabled class="btn-minimal btn-loader">asd</button>
+              <button class="btn-minimal btn-loader">asd</button>
+              <button class="btn-minimal">asd</button>
+              <button class="btn-minimal active">asd</button>
+              <button class="btn-minimal disabled">asd</button>
+              <br />
+              <br />
+            </div>
+          </div>
+
+          <pre class="mar-b-md"><code class="language-html">&lt;button disabled class="btn-primary btn-loader">test&lt;/button&gt;
+&lt;button class="btn-primary btn-loader"&gt;test&lt;/button&gt;
+&lt;button class="btn-primary"&gt;primary&lt;/button&gt;
+&lt;button class="btn-primary active"&gt;primary&lt;/button&gt;
+&lt;button class="btn-primary disabled"&gt;primary&lt;/button&gt;</code></pre>
+
+          <h2 id="navbar">Navbar</h2>
+
+          <br/>
+
+          <div class="card mar-b-md">
+            <div class="card-body">
+              <nav class="navbar">
+                <div class="navbar-group align-left">
+                  <div class="navbar-heading">Chipolette</div>
+                  <input class="input" placeholder="Search files..." type="text" />
+                </div>
+                <div class="navbar-group align-right">
+                  <button class="btn btn-minimal text-md"><i class="material-icons pad-r-xs text-lg">home</i>Home</button>
+                  <span class="navbar-divider"></span>
+                  <button class="btn btn-minimal icon-only"><i class="material-icons text-lg">account_circle</i></button>
+                  <button class="btn btn-minimal icon-only"><i class="material-icons text-lg">notifications</i></button>
+                  <button class="btn btn-minimal icon-only"><i class="material-icons text-lg">settings</i></button>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <pre class="mar-b-md"><code class="language-html">&lt;nav class="navbar"&gt;
+  &lt;div class="navbar-group align-left"&gt;
+    &lt;div class="navbar-heading"&gt;Chipolette&lt;/div&gt;
+    &lt;input class="input" placeholder="Search files..." type="text" /&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar-group align-right"&gt;
+    &lt;button class="btn btn-minimal text-md"&gt;
+      &lt;i class="material-icons pad-r-xs text-lg"&gt;home&lt;/i&gt;Home&lt;/button&gt;
+    &lt;span class="navbar-divider"&gt;&lt;/span&gt;
+    &lt;button class="btn btn-minimal icon-only"&gt;
+      &lt;i class="material-icons text-lg"&gt;account_circle&lt;/i&gt;&lt;/button&gt;
+    &lt;button class="btn btn-minimal icon-only"&gt;
+      &lt;i class="material-icons text-lg"&gt;notifications&lt;/i&gt;&lt;/button&gt;
+    &lt;button class="btn btn-minimal icon-only"&gt;
+      &lt;i class="material-icons text-lg"&gt;settings&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </div>
     </div>
     
     <footer class="mar-t-xl text-center text-muted text-small">
       <div class="container">
+
+        <p class="mar-y-sm text-center">
+          <a href="https://twitter.com/marcisbee?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large"
+            data-show-screen-name="false" data-show-count="false">Follow @marcisbee</a>
+          <a class="github-button" href="https://github.com/Marcisbee/chipolette" data-icon="octicon-star" data-size="large"
+            data-show-count="true" aria-label="Star Marcisbee/chipolette on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/Marcisbee/chipolette/fork" data-icon="octicon-repo-forked"
+            data-size="large" aria-label="Fork Marcisbee/chipolette on GitHub">Fork</a>
+        </p>
+        
         <hr class="mar-b-md"/>
         <p>Copyright (c) 2019-present, Marcis (Marcisbee) Bergmanis</p>
       </div>
     </footer>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
   </body>
 </html>

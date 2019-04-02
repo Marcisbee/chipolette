@@ -417,11 +417,13 @@ template {
   --color-gray: #aaa;
   --color-silver: #ddd;
   /* Alpha transparent colors */
+  --color-white-alpha-10: rgba(255, 255, 255, 0.1);
   --color-white-alpha-20: rgba(255, 255, 255, 0.2);
   --color-white-alpha-40: rgba(255, 255, 255, 0.4);
   --color-white-alpha-60: rgba(255, 255, 255, 0.6);
   --color-white-alpha-80: rgba(255, 255, 255, 0.8);
   --color-white-alpha-100: rgba(255, 255, 255, 0.1);
+  --color-black-alpha-10: rgba(0, 0, 0, 0.1);
   --color-black-alpha-20: rgba(0, 0, 0, 0.2);
   --color-black-alpha-40: rgba(0, 0, 0, 0.4);
   --color-black-alpha-60: rgba(0, 0, 0, 0.6);
@@ -432,8 +434,9 @@ template {
   --color-disabled-bg: #dadada;
   --color-disabled-border: transparent;
   /* States */
-  --state-default: var(--color-gray);
+  --state-default: var(--color-silver);
   --state-primary: var(--color-blue);
+  --state-secondary: var(--color-gray);
   --state-success: var(--color-green);
   --state-info: var(--color-teal);
   --state-warning: var(--color-orange);
@@ -442,7 +445,7 @@ template {
   --state-dark: var(--color-black);
   /* Components */
   --component-bg-color: #f2f2f2;
-  --component-border-color: #ddd;
+  --component-border-color: #ced4da;
   --component-border-radius: 0.25rem;
   --component-border-width: 1px;
   --component-focus-width: 2px;
@@ -451,6 +454,8 @@ template {
   --component-speed: 0.1s;
   --component-box-shadow-inner: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   --component-box-shadow-outer: 0 1px 0 rgba(0, 0, 0, 0.05);
+  /* Borders */
+  --border-radius: 0.18rem;
   /*************************************************************************************************
   * Alerts
   *************************************************************************************************/
@@ -466,6 +471,10 @@ template {
   --alert-bg-color-primary: var(--state-primary);
   --alert-color-primary: var(--color-navy);
   --alert-border-color-primary: var(--color-black-alpha-20);
+  /* Secondary */
+  --alert-bg-color-secondary: var(--state-secondary);
+  --alert-color-secondary: var(--color-navy);
+  --alert-border-color-secondary: var(--color-black-alpha-20);
   /* Success */
   --alert-bg-color-success: var(--state-success);
   --alert-color-success: var(--color-navy);
@@ -501,26 +510,134 @@ template {
   --badge-bg-color-primary: var(--state-primary);
   --badge-color-hover-primary: var(--badge-color-primary);
   --badge-bg-color-hover-primary: var(--badge-bg-color-primary);
-  /* success */
+  /* Secondary */
+  --badge-color-secondary: var(--color-white);
+  --badge-bg-color-secondary: var(--state-secondary);
+  --badge-color-hover-secondary: var(--badge-color-secondary);
+  --badge-bg-color-hover-secondary: var(--badge-bg-color-secondary);
+  /* Success */
   --badge-color-success: var(--color-white);
   --badge-bg-color-success: var(--state-success);
   --badge-color-hover-success: var(--badge-color-success);
   --badge-bg-color-hover-success: var(--badge-bg-color-success);
-  /* info */
+  /* Info */
   --badge-color-info: var(--color-white);
   --badge-bg-color-info: var(--state-info);
   --badge-color-hover-info: var(--badge-color-info);
   --badge-bg-color-hover-info: var(--badge-bg-color-info);
-  /* warning */
+  /* Warning */
   --badge-color-warning: var(--color-white);
   --badge-bg-color-warning: var(--state-warning);
   --badge-color-hover-warning: var(--badge-color-warning);
   --badge-bg-color-hover-warning: var(--badge-bg-color-warning);
-  /* danger */
+  /* Danger */
   --badge-color-danger: var(--color-white);
   --badge-bg-color-danger: var(--state-danger);
   --badge-color-hover-danger: var(--badge-color-danger);
   --badge-bg-color-hover-danger: var(--badge-bg-color-danger);
+  /* Light */
+  --badge-color-light: var(--color-navy);
+  --badge-bg-color-light: var(--state-light);
+  --badge-color-hover-light: var(--badge-color-light);
+  --badge-bg-color-hover-light: var(--badge-bg-color-light);
+  /* Dark */
+  --badge-color-dark: var(--color-white);
+  --badge-bg-color-dark: var(--state-dark);
+  --badge-color-hover-dark: var(--badge-color-dark);
+  --badge-bg-color-hover-dark: var(--badge-bg-color-dark);
+  /*************************************************************************************************
+  * Radios
+  *************************************************************************************************/
+  --radio-color: var(--color-white);
+  --radio-color-disabled: var(--color-disabled);
+  --radio-bg: var(--color-white);
+  --radio-bg-hover: var(--color-silver);
+  --radio-bg-disabled: var(--state-default);
+  --radio-border-width: var(--component-border-width);
+  --radio-border-color: var(--color-black-alpha-40);
+  --radio-speed: var(--component-speed);
+  --radio-size: 1.25rem;
+  --radio-offset-top: 0.15rem;
+  /* XS */
+  --radio-size-xs: 0.7rem;
+  --radio-offset-top-xs: -0.16rem;
+  /* SM */
+  --radio-size-sm: 0.9rem;
+  --radio-offset-top-sm: -0.09rem;
+  /* LG */
+  --radio-size-lg: 1.5rem;
+  --radio-offset-top-lg: 0.28rem;
+  /* XL */
+  --radio-size-xl: 1.8rem;
+  --radio-offset-top-xl: 0.44rem;
+  /* Default */
+  --radio-color-checked: var(--color-white);
+  --radio-bg-checked: var(--color-navy);
+  /* Primary */
+  --radio-color-checked-primary: var(--color-white);
+  --radio-bg-checked-primary: var(--state-primary);
+  /* Secondary */
+  --radio-color-checked-secondary: var(--color-white);
+  --radio-bg-checked-secondary: var(--state-secondary);
+  /* Success */
+  --radio-color-checked-success: var(--color-white);
+  --radio-bg-checked-success: var(--state-success);
+  /* Info */
+  --radio-color-checked-info: var(--color-white);
+  --radio-bg-checked-info: var(--state-info);
+  /* Warning */
+  --radio-color-checked-warning: var(--color-white);
+  --radio-bg-checked-warning: var(--state-warning);
+  /* Danger */
+  --radio-color-checked-danger: var(--color-white);
+  --radio-bg-checked-danger: var(--state-danger);
+  /*************************************************************************************************
+  * Checkboxes
+  *************************************************************************************************/
+  --checkbox-color: var(--color-white);
+  --checkbox-color-disabled: var(--color-disabled);
+  --checkbox-bg: var(--color-white);
+  --checkbox-bg-hover: var(--color-silver);
+  --checkbox-bg-disabled: var(--state-default);
+  --checkbox-border-width: var(--component-border-width);
+  --checkbox-border-color: var(--color-black-alpha-40);
+  --checkbox-border-radius: var(--component-border-radius);
+  --checkbox-speed: var(--component-speed);
+  --checkbox-size: 1.25rem;
+  --checkbox-offset-top: 0.15rem;
+  /* XS */
+  --checkbox-size-xs: 0.7rem;
+  --checkbox-offset-top-xs: -0.16rem;
+  /* SM */
+  --checkbox-size-sm: 0.9rem;
+  --checkbox-offset-top-sm: -0.09rem;
+  /* LG */
+  --checkbox-size-lg: 1.5rem;
+  --checkbox-offset-top-lg: 0.28rem;
+  /* XL */
+  --checkbox-size-xl: 1.8rem;
+  --checkbox-offset-top-xl: 0.44rem;
+  /* Default */
+  --checkbox-color-checked: var(--color-white);
+  --checkbox-bg-checked: var(--color-navy);
+  /* Primary */
+  --checkbox-color-checked-primary: var(--color-white);
+  --checkbox-bg-checked-primary: var(--state-primary);
+  /* Secondary */
+  --checkbox-color-checked-secondary: var(--color-white);
+  --checkbox-bg-checked-secondary: var(--state-secondary);
+  /* Success */
+  --checkbox-color-checked-success: var(--color-white);
+  --checkbox-bg-checked-success: var(--state-success);
+  /* Info */
+  --checkbox-color-checked-info: var(--color-white);
+  --checkbox-bg-checked-info: var(--state-info);
+  /* Warning */
+  --checkbox-color-checked-warning: var(--color-white);
+  --checkbox-bg-checked-warning: var(--state-warning);
+  /* Danger */
+  --checkbox-color-checked-danger: var(--color-white);
+  --checkbox-bg-checked-danger: var(--state-danger);
   /*************************************************************************************************
   * Buttons
   *************************************************************************************************/
@@ -565,6 +682,16 @@ template {
   --button-color-active-primary: var(--button-color-primary);
   --button-bg-color-active-primary: var(--button-bg-color-primary);
   --button-border-color-active-primary: var(--button-border-color-primary);
+  /* Secondary */
+  --button-color-secondary: var(--color-white);
+  --button-bg-color-secondary: var(--state-secondary);
+  --button-border-color-secondary: var(--color-black-alpha-40);
+  --button-color-hover-secondary: var(--button-color-secondary);
+  --button-bg-color-hover-secondary: var(--button-bg-color-secondary);
+  --button-border-color-hover-secondary: var(--button-border-color-secondary);
+  --button-color-active-secondary: var(--button-color-secondary);
+  --button-bg-color-active-secondary: var(--button-bg-color-secondary);
+  --button-border-color-active-secondary: var(--button-border-color-secondary);
   /* Success */
   --button-color-success: var(--color-white);
   --button-bg-color-success: var(--state-success);
@@ -605,6 +732,21 @@ template {
   --button-color-active-danger: var(--button-color-danger);
   --button-bg-color-active-danger: var(--button-bg-color-danger);
   --button-border-color-active-danger: var(--button-border-color-danger);
+  /* Light */
+  --button-color-light: var(--color-navy);
+  --button-bg-color-light: var(--color-black-alpha-10);
+  --button-color-light-hover: var(--button-color-light);
+  --button-bg-color-light-hover: var(--color-black-alpha-20);
+  /* Dark */
+  --button-color-dark: var(--color-white);
+  --button-bg-color-dark: var(--color-navy);
+  --button-color-dark-hover: var(--button-color-dark);
+  --button-bg-color-dark-hover: var(--button-bg-color-dark);
+  /* Minimal */
+  --button-minimal-color: var(--color-navy);
+  --button-minimal-bg-color: transparent;
+  --button-minimal-color-hover: var(--button-minimal-color);
+  --button-minimal-bg-color-hover: var(--color-black-alpha-10);
   /*************************************************************************************************
   * Content
   *************************************************************************************************/
@@ -612,9 +754,14 @@ template {
   --body-color: var(--color-black);
   --body-color-muted: var(--color-gray);
   --font-family: var(--font-system);
+  --font-size-small: 80%;
+  --font-size-xs: 60%;
+  --font-size-sm: 80%;
+  --font-size-md: 90%;
   --font-size: 1rem;
   /* Most browsers use a default font size of 16px */
-  --font-size-small: 80%;
+  --font-size-lg: 1.3rem;
+  --font-size-xl: 1.8rem;
   --font-weight-light: 300;
   --font-weight: 400;
   --font-weight-bold: 700;
@@ -673,9 +820,11 @@ template {
   --dropdown-font-size: inherit;
   --dropdown-font-weight: inherit;
   --dropdown-color: var(--body-color);
-  --dropdown-color-hover: var(--color-white);
+  --dropdown-color-hover: var(--dropdown-color);
+  --dropdown-color-active: var(--color-white);
   --dropdown-bg-color: var(--color-white);
-  --dropdown-bg-color-hover: var(--state-primary);
+  --dropdown-bg-color-hover: var(--color-black-alpha-10);
+  --dropdown-bg-color-active: var(--state-primary);
   --dropdown-box-shadow: var(--component-box-shadow-outer);
   --dropdown-line-height: var(--line-height);
   --dropdown-padding-x: 1rem;
@@ -694,11 +843,11 @@ template {
   /*************************************************************************************************
   * Forms
   *************************************************************************************************/
-  --input-height-xs: 1.25rem;
-  --input-height-sm: 1.75rem;
-  --input-height: 2.25rem;
-  --input-height-lg: 2.75rem;
-  --input-height-xl: 3.25rem;
+  --input-height-xs: 1.35rem;
+  --input-height-sm: 2rem;
+  --input-height: 2.4rem;
+  --input-height-lg: 3rem;
+  --input-height-xl: 3.35rem;
   --input-font-size-xs: 0.625rem;
   --input-font-size-sm: 0.875rem;
   --input-font-size: 1rem;
@@ -716,7 +865,7 @@ template {
   --input-focus-color: var(--state-primary);
   --input-speed: var(--component-speed);
   --input-addon-bg-color: var(--component-bg-color);
-  --input-addon-color: var(--body-color-muted);
+  --input-addon-color: var(--color-disabled);
   --input-hint-color: var(--body-color-muted);
   --input-hint-font-size: var(--font-size-small);
   --input-icon-width: 2em;
@@ -727,9 +876,9 @@ template {
   --input-range-track-box-shadow: var(--component-box-shadow-inner);
   --input-range-thumb-height: 1.25rem;
   --input-range-thumb-color: var(--state-primary);
-  --input-invalid-color: var(--state-danger);
+  --input-invalid-color: var(--body-color);
   --input-invalid-border-color: var(--state-danger);
-  --input-valid-color: var(--state-success);
+  --input-valid-color: var(--body-color);
   --input-valid-border-color: var(--state-success);
   --fieldset-border-color: var(--component-border-color);
   --fieldset-border-width: var(--component-border-width);
@@ -763,8 +912,10 @@ template {
   --loader-margin-y: 0;
   /* Default */
   --loader-color: var(--state-primary);
-  /* primary */
+  /* Primary */
   --loader-color-primary: var(--state-primary);
+  /* Secondary */
+  --loader-color-secondary: var(--state-secondary);
   /* Success */
   --loader-color-success: var(--state-success);
   /* Info */
@@ -773,6 +924,10 @@ template {
   --loader-color-warning: var(--state-warning);
   /* Danger */
   --loader-color-danger: var(--state-danger);
+  /* Light */
+  --loader-color-light: var(--state-light);
+  /* Dark */
+  --loader-color-dark: var(--state-dark);
   /*************************************************************************************************
   * Progress Bars
   *************************************************************************************************/
@@ -868,6 +1023,28 @@ template {
   --tab-pane-padding-x: var(--component-padding-x);
   --tab-pane-padding-y: var(--component-padding-y);
   /*************************************************************************************************
+  * Navbars
+  *************************************************************************************************/
+  --navbar-bg-color: var(--body-bg-color);
+  --navbar-padding: var(--grid-gutter-width);
+  --navbar-height: 3.4rem;
+  --navbar-border-radius: var(--border-radius);
+  --navbar-elevation-shadow: var(--elevation-shadow-1);
+  /*************************************************************************************************
+  * Cards
+  *************************************************************************************************/
+  --card-bg-color: var(--color-white);
+  --card-padding: 1.25rem;
+  --card-border-radius: var(--border-radius);
+  --card-elevation-shadow: var(--elevation-shadow-0);
+  /*************************************************************************************************
+  * List groups
+  *************************************************************************************************/
+  --list-group-bg-color: var(--body-bg-color);
+  --list-group-padding: calc(var(--grid-gutter-width) / 3) calc(var(--grid-gutter-width) / 2);
+  --list-group-border-radius: var(--border-radius);
+  --list-group-elevation-shadow: var(--elevation-shadow-1);
+  /*************************************************************************************************
   * Utilities
   *************************************************************************************************/
   --spacing-xs: 0.5rem;
@@ -875,6 +1052,13 @@ template {
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 2.5rem;
+  --divider-color-black: rgba(16, 22, 26, 0.15);
+  --divider-color-white: rgba(255, 255, 255, 0.15);
+  --elevation-shadow-0: 0 0 0 1px rgba(16, 22, 26, 0.15), 0 0 0 rgba(16,22,26,0), 0 0 0 rgba(16,22,26,0);
+  --elevation-shadow-1: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0 0 rgba(16,22,26,0), 0 1px 1px rgba(16,22,26,.2);
+  --elevation-shadow-2: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 1px 1px rgba(16,22,26,.2), 0 2px 6px rgba(16,22,26,.2);
+  --elevation-shadow-3: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16,22,26,.2), 0 8px 24px rgba(16,22,26,.2);
+  --elevation-shadow-4: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 4px 8px rgba(16,22,26,.2), 0 18px 46px 6px rgba(16,22,26,.2);
 }
 /* Core breakpoints */
 /*! Alerts */
@@ -901,27 +1085,32 @@ template {
 .alert > :last-child {
   margin-bottom: 0;
 }
-.alert.intent-primary {
+.alert.alert-primary {
   color: var(--alert-color-primary);
   background-color: var(--alert-bg-color-primary);
   border-color: var(--alert-border-color-primary);
 }
-.alert.intent-info {
+.alert.alert-secondary {
+  color: var(--alert-color-secondary);
+  background-color: var(--alert-bg-color-secondary);
+  border-color: var(--alert-border-color-secondary);
+}
+.alert.alert-info {
   color: var(--alert-color-info);
   background-color: var(--alert-bg-color-info);
   border-color: var(--alert-border-color-info);
 }
-.alert.intent-success {
+.alert.alert-success {
   color: var(--alert-color-success);
   background-color: var(--alert-bg-color-success);
   border-color: var(--alert-border-color-success);
 }
-.alert.intent-warning {
+.alert.alert-warning {
   color: var(--alert-color-warning);
   background-color: var(--alert-bg-color-warning);
   border-color: var(--alert-border-color-warning);
 }
-.alert.intent-danger {
+.alert.alert-danger {
   color: var(--alert-color-danger);
   background-color: var(--alert-bg-color-danger);
   border-color: var(--alert-border-color-danger);
@@ -941,31 +1130,35 @@ template {
 .badge:empty {
   display: none;
 }
-.badge.intent-primary {
+.badge.badge-primary {
   color: var(--badge-color-primary);
   background-color: var(--badge-bg-color-primary);
 }
-.badge.intent-success {
+.badge.badge-secondary {
+  color: var(--badge-color-secondary);
+  background-color: var(--badge-bg-color-secondary);
+}
+.badge.badge-success {
   color: var(--badge-color-success);
   background-color: var(--badge-bg-color-success);
 }
-.badge.intent-info {
+.badge.badge-info {
   color: var(--badge-color-info);
   background-color: var(--badge-bg-color-info);
 }
-.badge.intent-warning {
+.badge.badge-warning {
   color: var(--badge-color-warning);
   background-color: var(--badge-bg-color-warning);
 }
-.badge.intent-danger {
+.badge.badge-danger {
   color: var(--badge-color-danger);
   background-color: var(--badge-bg-color-danger);
 }
-.badge.intent-light {
+.badge.badge-light {
   color: var(--badge-color-light);
   background-color: var(--badge-bg-color-light);
 }
-.badge.intent-dark {
+.badge.badge-dark {
   color: var(--badge-color-dark);
   background-color: var(--badge-bg-color-dark);
 }
@@ -979,32 +1172,47 @@ a.badge:hover {
 a.badge:focus {
   outline: none;
 }
-a.badge.intent-primary:hover {
+a.badge.badge-primary:hover {
   color: var(--badge-color-primary);
   background-color: var(--badge-bg-color-hover-primary);
 }
-a.badge.intent-success:hover {
+a.badge.badge-secondary:hover {
+  color: var(--badge-color-secondary);
+  background-color: var(--badge-bg-color-hover-secondary);
+}
+a.badge.badge-success:hover {
   color: var(--badge-color-success);
   background-color: var(--badge-bg-color-hover-success);
 }
-a.badge.intent-info:hover {
+a.badge.badge-info:hover {
   color: var(--badge-color-info);
   background-color: var(--badge-bg-color-hover-info);
 }
-a.badge.intent-warning:hover {
+a.badge.badge-warning:hover {
   color: var(--badge-color-warning);
   background-color: var(--badge-bg-color-hover-warning);
 }
-a.badge.intent-danger:hover {
+a.badge.badge-danger:hover {
   color: var(--badge-color-danger);
   background-color: var(--badge-bg-color-hover-danger);
 }
+a.badge.badge-light:hover {
+  color: var(--badge-color-light);
+  background-color: var(--badge-bg-color-hover-light);
+}
+a.badge.badge-dark:hover {
+  color: var(--badge-color-dark);
+  background-color: var(--badge-bg-color-hover-dark);
+}
 /*! Buttons */
 .outline {
-  outline: none;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(0, 114, 214, 0.4);
+  outline-style: solid;
 }
 button,
-.button {
+.btn {
   font-family: var(--button-font-family);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
@@ -1031,13 +1239,17 @@ button,
   /* Variations */
   /* Block buttons */
   /* Link buttons */
+  /* Minimal buttons */
 }
 button:focus,
-.button:focus {
-  outline: none;
+.btn:focus {
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(0, 114, 214, 0.4);
+  outline-style: solid;
 }
 button:hover,
-.button:hover {
+.btn:hover {
   color: var(--button-color-hover);
   text-decoration: none;
   background-color: var(--button-bg-color-hover);
@@ -1045,155 +1257,203 @@ button:hover,
   box-shadow: inset 0 -1000px rgba(0, 0, 0, 0.05);
 }
 button:active,
-.button:active,
+.btn:active,
 button.active,
-.button.active {
+.btn.active {
   color: var(--button-color-active);
   background-color: var(--button-bg-color-active);
   border-color: var(--button-border-color-active);
-  transform: translate(0, 1px) scale(0.99);
+  transform: translate(0, 1px);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 -1000px rgba(0, 0, 0, 0.2);
 }
-button.button-xs,
-.button.button-xs {
+button.btn-xs,
+.btn.btn-xs {
   font-size: var(--button-font-size-xs);
   height: var(--button-height-xs);
   line-height: calc(var(--button-height-xs) - var(--button-border-width) * 2);
 }
-button.button-sm,
-.button.button-sm {
+button.btn-sm,
+.btn.btn-sm {
   font-size: var(--button-font-size-sm);
   height: var(--button-height-sm);
   line-height: calc(var(--button-height-sm) - var(--button-border-width) * 2);
 }
-button.button-lg,
-.button.button-lg {
+button.btn-lg,
+.btn.btn-lg {
   font-size: var(--button-font-size-lg);
   height: var(--button-height-lg);
   line-height: calc(var(--button-height-lg) - var(--button-border-width) * 2);
 }
-button.button-xl,
-.button.button-xl {
+button.btn-xl,
+.btn.btn-xl {
   font-size: var(--button-font-size-xl);
   height: var(--button-height-xl);
   line-height: calc(var(--button-height-xl) - var(--button-border-width) * 2);
 }
-button.intent-primary,
-.button.intent-primary {
+button.btn-primary,
+.btn.btn-primary {
   color: var(--button-color-primary);
   background-color: var(--button-bg-color-primary);
   border-color: var(--button-border-color-primary);
 }
-button.intent-primary:hover,
-.button.intent-primary:hover {
+button.btn-primary:hover,
+.btn.btn-primary:hover {
   color: var(--button-color-hover-primary);
   background-color: var(--button-bg-color-hover-primary);
   border-color: var(--button-border-color-hover-primary);
 }
-button.intent-primary:active,
-.button.intent-primary:active,
-button.intent-primary.active,
-.button.intent-primary.active {
+button.btn-primary:active,
+.btn.btn-primary:active,
+button.btn-primary.active,
+.btn.btn-primary.active {
   color: var(--button-color-active-primary);
   background-color: var(--button-bg-color-active-primary);
   border-color: var(--button-border-color-active-primary);
 }
-button.intent-success,
-.button.intent-success {
+button.btn-secondary,
+.btn.btn-secondary {
+  color: var(--button-color-secondary);
+  background-color: var(--button-bg-color-secondary);
+  border-color: var(--button-border-color-secondary);
+}
+button.btn-secondary:hover,
+.btn.btn-secondary:hover {
+  color: var(--button-color-hover-secondary);
+  background-color: var(--button-bg-color-hover-secondary);
+  border-color: var(--button-border-color-hover-secondary);
+}
+button.btn-secondary:active,
+.btn.btn-secondary:active,
+button.btn-secondary.active,
+.btn.btn-secondary.active {
+  color: var(--button-color-active-secondary);
+  background-color: var(--button-bg-color-active-secondary);
+  border-color: var(--button-border-color-active-secondary);
+}
+button.btn-success,
+.btn.btn-success {
   color: var(--button-color-success);
   background-color: var(--button-bg-color-success);
   border-color: var(--button-border-color-success);
 }
-button.intent-success:hover,
-.button.intent-success:hover {
+button.btn-success:hover,
+.btn.btn-success:hover {
   color: var(--button-color-hover-success);
   background-color: var(--button-bg-color-hover-success);
   border-color: var(--button-border-color-hover-success);
 }
-button.intent-success:active,
-.button.intent-success:active,
-button.intent-success.active,
-.button.intent-success.active {
+button.btn-success:active,
+.btn.btn-success:active,
+button.btn-success.active,
+.btn.btn-success.active {
   color: var(--button-color-active-success);
   background-color: var(--button-bg-color-active-success);
   border-color: var(--button-border-color-active-success);
 }
-button.intent-info,
-.button.intent-info {
+button.btn-info,
+.btn.btn-info {
   color: var(--button-color-info);
   background-color: var(--button-bg-color-info);
   border-color: var(--button-border-color-info);
 }
-button.intent-info:hover,
-.button.intent-info:hover {
+button.btn-info:hover,
+.btn.btn-info:hover {
   color: var(--button-color-hover-info);
   background-color: var(--button-bg-color-hover-info);
   border-color: var(--button-border-color-hover-info);
 }
-button.intent-info:active,
-.button.intent-info:active,
-button.intent-info.active,
-.button.intent-info.active {
+button.btn-info:active,
+.btn.btn-info:active,
+button.btn-info.active,
+.btn.btn-info.active {
   color: var(--button-color-active-info);
   background-color: var(--button-bg-color-active-info);
   border-color: var(--button-border-color-active-info);
 }
-button.intent-warning,
-.button.intent-warning {
+button.btn-warning,
+.btn.btn-warning {
   color: var(--button-color-warning);
   background-color: var(--button-bg-color-warning);
   border-color: var(--button-border-color-warning);
 }
-button.intent-warning:hover,
-.button.intent-warning:hover {
+button.btn-warning:hover,
+.btn.btn-warning:hover {
   color: var(--button-color-hover-warning);
   background-color: var(--button-bg-color-hover-warning);
   border-color: var(--button-border-color-hover-warning);
 }
-button.intent-warning:active,
-.button.intent-warning:active,
-button.intent-warning.active,
-.button.intent-warning.active {
+button.btn-warning:active,
+.btn.btn-warning:active,
+button.btn-warning.active,
+.btn.btn-warning.active {
   color: var(--button-color-active-warning);
   background-color: var(--button-bg-color-active-warning);
   border-color: var(--button-border-color-active-warning);
 }
-button.intent-danger,
-.button.intent-danger {
+button.btn-danger,
+.btn.btn-danger {
   color: var(--button-color-danger);
   background-color: var(--button-bg-color-danger);
   border-color: var(--button-border-color-danger);
 }
-button.intent-danger:hover,
-.button.intent-danger:hover {
+button.btn-danger:hover,
+.btn.btn-danger:hover {
   color: var(--button-color-hover-danger);
   background-color: var(--button-bg-color-hover-danger);
   border-color: var(--button-border-color-hover-danger);
 }
-button.intent-danger:active,
-.button.intent-danger:active,
-button.intent-danger.active,
-.button.intent-danger.active {
+button.btn-danger:active,
+.btn.btn-danger:active,
+button.btn-danger.active,
+.btn.btn-danger.active {
   color: var(--button-color-active-danger);
   background-color: var(--button-bg-color-active-danger);
   border-color: var(--button-border-color-active-danger);
 }
+button.btn-light,
+.btn.btn-light {
+  color: var(--button-color-light);
+  background-color: var(--button-bg-color-light);
+  text-decoration: none;
+}
+button.btn-light:hover,
+.btn.btn-light:hover,
+button.btn-light:focus,
+.btn.btn-light:focus {
+  color: var(--button-color-light-hover);
+  background-color: var(--button-bg-color-light-hover);
+  text-decoration: none;
+}
+button.btn-dark,
+.btn.btn-dark {
+  color: var(--button-color-dark);
+  background-color: var(--button-bg-color-dark);
+  text-decoration: none;
+}
+button.btn-dark:hover,
+.btn.btn-dark:hover,
+button.btn-dark:focus,
+.btn.btn-dark:focus {
+  color: var(--button-color-dark-hover);
+  background-color: var(--button-bg-color-dark-hover);
+  text-decoration: none;
+}
 button:disabled:hover,
-.button:disabled:hover,
+.btn:disabled:hover,
 button.disabled:hover,
-.button.disabled:hover,
+.btn.disabled:hover,
 button:disabled:active,
-.button:disabled:active,
+.btn:disabled:active,
 button.disabled:active,
-.button.disabled:active,
+.btn.disabled:active,
 button:disabled:focus,
-.button:disabled:focus,
+.btn:disabled:focus,
 button.disabled:focus,
-.button.disabled:focus,
+.btn.disabled:focus,
 button:disabled,
-.button:disabled,
+.btn:disabled,
 button.disabled,
-.button.disabled {
+.btn.disabled {
   color: var(--button-color-disabled);
   background-color: var(--button-bg-color-disabled);
   border-color: var(--button-border-color-disabled);
@@ -1203,38 +1463,68 @@ button.disabled,
   cursor: not-allowed;
   transform: none;
 }
-button.button-block,
-.button.button-block {
+button.btn-block,
+.btn.btn-block {
   width: 100% !important;
   display: block;
 }
-button.button-link,
-.button.button-link {
+button.btn-link,
+.btn.btn-link {
   border-color: transparent;
   background-color: transparent;
   color: var(--link-color);
   text-decoration: var(--link-text-decoration);
   box-shadow: none;
 }
-button.button-link:hover,
-.button.button-link:hover,
-button.button-link:focus,
-.button.button-link:focus {
+button.btn-link:hover,
+.btn.btn-link:hover,
+button.btn-link:focus,
+.btn.btn-link:focus {
   border-color: transparent;
   background-color: transparent;
   color: var(--link-color-hover);
   text-decoration: var(--link-text-decoration-hover);
   box-shadow: none;
 }
+button.btn-minimal,
+.btn.btn-minimal {
+  border-color: transparent;
+  color: var(--button-minimal-color);
+  background-color: var(--button-minimal-bg-color);
+  text-decoration: none;
+  box-shadow: none;
+}
+button.btn-minimal:hover,
+.btn.btn-minimal:hover,
+button.btn-minimal:focus,
+.btn.btn-minimal:focus {
+  border-color: transparent;
+  color: var(--button-minimal-color-hover);
+  background-color: var(--button-minimal-bg-color-hover);
+  text-decoration: none;
+  box-shadow: none;
+}
+button.btn-minimal.active,
+.btn.btn-minimal.active,
+button.btn-minimal:active,
+.btn.btn-minimal:active {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 -1000px rgba(0, 0, 0, 0.2);
+}
+button > *,
+.btn > * {
+  vertical-align: top;
+  line-height: inherit;
+  font-size: inherit;
+}
 /* Loader buttons */
-.button-loader,
-.button-loader:hover {
+.btn-loader,
+.btn-loader:hover {
   position: relative;
   min-width: calc(var(--button-loader-size) * 2);
   color: transparent !important;
   overflow: hidden;
 }
-.button-loader::after {
+.btn-loader::after {
   content: '';
   position: absolute;
   top: calc(50% - calc(var(--button-loader-size) / 2));
@@ -1249,23 +1539,32 @@ button.button-link:focus,
   display: inline-block;
   animation: button-loader var(--loader-speed) linear infinite;
 }
-.intent-primary.button-loader::after {
+.btn-primary.btn-loader::after {
   border-color: var(--button-color-primary);
 }
-.intent-success.button-loader::after {
+.btn-secondary.btn-loader::after {
+  border-color: var(--button-color-secondary);
+}
+.btn-success.btn-loader::after {
   border-color: var(--button-color-success);
 }
-.intent-info.button-loader::after {
+.btn-info.btn-loader::after {
   border-color: var(--button-color-info);
 }
-.intent-warning.button-loader::after {
+.btn-warning.btn-loader::after {
   border-color: var(--button-color-warning);
 }
-.intent-danger.button-loader::after {
+.btn-danger.btn-loader::after {
   border-color: var(--button-color-danger);
 }
-.button-loader.disabled::after,
-.button-loader:disabled::after {
+.btn-light.btn-loader::after {
+  border-color: var(--button-color-light);
+}
+.btn-dark.btn-loader::after {
+  border-color: var(--button-color-dark);
+}
+.btn-loader.disabled::after,
+.btn-loader:disabled::after {
   border-color: var(--button-color-disabled);
 }
 @keyframes button-loader {
@@ -1275,6 +1574,19 @@ button.button-link:focus,
   100% {
     transform: rotate(360deg);
   }
+}
+/*! Cards */
+.card {
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-bg-color);
+  padding: var(--card-padding);
+  box-shadow: var(--card-elevation-shadow);
+}
+.card.interactive {
+  transition: transform 0.2s cubic-bezier(0.4, 1, 0.75, 0.9), box-shadow 0.2s cubic-bezier(0.4, 1, 0.75, 0.9), -webkit-transform 0.2s cubic-bezier(0.4, 1, 0.75, 0.9), -webkit-box-shadow 0.2s cubic-bezier(0.4, 1, 0.75, 0.9);
+}
+.card.interactive:hover {
+  box-shadow: var(--elevation-shadow-4) !important;
 }
 /*! Content */
 /***************************************************************************************************
@@ -1426,22 +1738,22 @@ small {
 .text-black {
   color: #000;
 }
-.bg-intent-default {
+.bg-default {
   background-color: var(--state-default);
 }
-.bg-intent-primary {
+.bg-primary {
   background-color: var(--state-primary);
 }
-.bg-intent-success {
+.bg-success {
   background-color: var(--state-success);
 }
-.bg-intent-info {
+.bg-info {
   background-color: var(--state-info);
 }
-.bg-intent-warning {
+.bg-warning {
   background-color: var(--state-warning);
 }
-.bg-intent-danger {
+.bg-danger {
   background-color: var(--state-danger);
 }
 /***************************************************************************************************
@@ -1509,6 +1821,23 @@ ul ul {
   position: absolute;
   top: calc(100% + var(--dropdown-offset-y));
   left: var(--dropdown-offset-x);
+  display: none;
+}
+.dropdown.dropdown-top .dropdown-menu {
+  top: auto;
+  bottom: calc(100% + var(--dropdown-offset-y));
+}
+.dropdown.dropdown-left .dropdown-menu {
+  left: auto;
+  right: var(--dropdown-offset-x);
+}
+.dropdown .dropdown-trigger:focus + .dropdown-menu,
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+/* Menu */
+.dropdown-menu {
+  position: static;
   z-index: var(--dropdown-z-index);
   min-width: var(--dropdown-min-width);
   max-width: var(--dropdown-max-width);
@@ -1521,13 +1850,12 @@ ul ul {
   border: solid var(--dropdown-border-width) var(--dropdown-border-color);
   border-radius: var(--dropdown-border-radius);
   box-shadow: var(--dropdown-box-shadow);
-  display: none;
   padding: var(--dropdown-padding-y) 0;
   overflow-y: auto;
   transform: translateZ(0);
   user-select: none;
 }
-.dropdown .dropdown-menu a {
+.dropdown-menu a {
   position: relative;
   color: var(--dropdown-color);
   text-decoration: none;
@@ -1537,46 +1865,40 @@ ul ul {
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
-.dropdown .dropdown-menu a:hover {
+.dropdown-menu a:hover {
   color: var(--dropdown-color-hover);
   background-color: var(--dropdown-bg-color-hover);
 }
-.dropdown .dropdown-menu a.disabled {
+.dropdown-menu a.active,
+.dropdown-menu a:active {
+  color: var(--dropdown-color-active);
+  background-color: var(--dropdown-bg-color-active);
+}
+.dropdown-menu a.disabled {
   background-color: transparent;
   color: var(--dropdown-color);
   outline: none;
   cursor: not-allowed;
   opacity: 0.5;
 }
-.dropdown .dropdown-menu a.checked::before {
+.dropdown-menu a.checked::before {
   position: absolute;
   left: calc(var(--dropdown-padding-x) / 2 - 0.1em);
   content: '✓';
   font-family: var(--font-system);
   font-weight: 600;
 }
-.dropdown .dropdown-menu hr {
+.dropdown-menu hr {
   width: 100%;
   border-top: solid var(--dropdown-divider-width) var(--dropdown-divider-color);
   margin: var(--dropdown-padding-y) 0;
 }
-.dropdown .dropdown-menu .dropdown-heading {
+.dropdown-menu .dropdown-heading {
   font-size: var(--dropdown-heading-font-size);
   font-weight: var(--dropdown-heading-font-weight);
   color: var(--dropdown-heading-color);
   padding: var(--dropdown-padding-y) calc(var(--dropdown-padding-x) + 0.5em);
   cursor: default;
-}
-.dropdown.dropdown-top .dropdown-menu {
-  top: auto;
-  bottom: calc(100% + var(--dropdown-offset-y));
-}
-.dropdown.dropdown-left .dropdown-menu {
-  left: auto;
-  right: var(--dropdown-offset-x);
-}
-.dropdown.dropdown.active .dropdown-menu {
-  display: block;
 }
 /*! File buttons */
 .file-button {
@@ -1635,7 +1957,7 @@ textarea {
   font-size: var(--input-font-size);
   font-weight: var(--input-font-weight);
   color: var(--input-color);
-  border: solid var(--input-border-width) var(--input-border-color);
+  border: solid var(--input-border-width) var(--input-border-color, #ced4da);
   border-radius: var(--input-border-radius);
   box-shadow: var(--input-box-shadow);
   background-color: var(--input-bg-color);
@@ -1643,8 +1965,8 @@ textarea {
   line-height: var(--input-height);
   vertical-align: middle;
   display: block;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   margin: 0;
   transition: var(--input-speed) border-color, var(--component-speed) background-color, var(--component-speed) color;
   white-space: nowrap;
@@ -1944,15 +2266,22 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 /* Input fields */
 .input-field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+/* Form group */
+.form-group {
+  margin-bottom: 1.2rem;
 }
 /* Input groups */
 .input-group {
   width: 100%;
+  margin-bottom: 1.2rem;
+  align-items: stretch;
   display: flex;
-  margin-bottom: 1.5rem;
+  position: relative;
   /* Force a new stacking context so focus rings don't get truncated by adjacent elements */
 }
+.input-group > textarea,
 .input-group > input,
 .input-group > button,
 .input-group > .button,
@@ -1962,7 +2291,9 @@ input[type="range"]:focus::-ms-fill-upper {
 .input-group > .input-icon input,
 .input-group > .input-icon select {
   border-radius: 0;
+  margin-bottom: 0 !important;
 }
+.input-group > textarea:first-child,
 .input-group > input:first-child,
 .input-group > button:first-child,
 .input-group > .button:first-child,
@@ -1974,6 +2305,7 @@ input[type="range"]:focus::-ms-fill-upper {
   border-top-left-radius: var(--input-border-radius);
   border-bottom-left-radius: var(--input-border-radius);
 }
+.input-group > textarea:last-child,
 .input-group > input:last-child,
 .input-group > button:last-child,
 .input-group > .button:last-child,
@@ -2012,9 +2344,11 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 /* Input addons */
 .input-addon {
+  display: flex;
+  align-items: center;
+  height: auto !important;
   font-size: var(--input-font-size);
-  height: var(--input-height);
-  line-height: var(--input-height);
+  line-height: calc(var(--input-height) - 2px);
   border-top: solid var(--input-border-width) var(--input-border-color);
   border-bottom: solid var(--input-border-width) var(--input-border-color);
   background: var(--input-addon-bg-color);
@@ -2051,6 +2385,361 @@ input[type="range"]:focus::-ms-fill-upper {
   font-size: var(--input-font-size-xl);
   height: var(--input-height-xl);
   line-height: var(--input-height-xl);
+}
+/* Checkbox */
+.checkbox {
+  position: relative;
+  /* Primary */
+  /* Secondary */
+  /* Success */
+  /* Info */
+  /* Warning */
+  /* Danger */
+  /* XS */
+  /* SM */
+  /* LG */
+  /* XL */
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.checkbox label {
+  padding-left: calc(var(--checkbox-size) + 0.55rem);
+  padding-right: 1.25rem;
+  height: var(--checkbox-size);
+}
+.checkbox label::after {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  display: block;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(var(--checkbox-size) / 2);
+  margin-top: calc(var(--checkbox-offset-top) * -1);
+  z-index: 1;
+}
+.checkbox label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  display: block;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  pointer-events: none;
+  content: '';
+  user-select: none;
+  border-radius: var(--checkbox-border-radius);
+  background-color: var(--checkbox-bg);
+  border-style: solid;
+  border-width: var(--checkbox-border-width);
+  border-color: var(--checkbox-border-color);
+  cursor: pointer;
+  transition: var(--checkbox-speed) color, var(--checkbox-speed) background;
+  box-shadow: inset 0 -40px 50px -50px rgba(0, 0, 0, 0.2);
+  margin-top: calc(var(--checkbox-offset-top) * -1);
+  z-index: 0;
+}
+.checkbox input:checked ~ label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+.checkbox input:checked ~ label::before {
+  color: var(--checkbox-color-checked);
+  background-color: var(--checkbox-bg-checked);
+}
+.checkbox:hover label::before {
+  background-color: var(--checkbox-bg-hover);
+}
+.checkbox:hover input:checked:not(:disabled) ~ label::before {
+  box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
+}
+.checkbox input:disabled ~ label {
+  color: var(--checkbox-color-disabled);
+}
+.checkbox input:disabled ~ label::before {
+  color: transparent;
+  border-color: transparent;
+  background-color: var(--checkbox-bg-disabled);
+  box-shadow: none;
+}
+.checkbox.inline {
+  margin-right: 2rem;
+}
+.checkbox.checkbox-primary input:checked ~ label::before {
+  color: var(--checkbox-color-checked-primary);
+  background-color: var(--checkbox-bg-checked-primary);
+}
+.checkbox.checkbox-secondary input:checked ~ label::before {
+  color: var(--checkbox-color-checked-secondary);
+  background-color: var(--checkbox-bg-checked-secondary);
+}
+.checkbox.checkbox-success input:checked ~ label::before {
+  color: var(--checkbox-color-checked-success);
+  background-color: var(--checkbox-bg-checked-success);
+}
+.checkbox.checkbox-info input:checked ~ label::before {
+  color: var(--checkbox-color-checked-info);
+  background-color: var(--checkbox-bg-checked-info);
+}
+.checkbox.checkbox-warning input:checked ~ label::before {
+  color: var(--checkbox-color-checked-warning);
+  background-color: var(--checkbox-bg-checked-warning);
+}
+.checkbox.checkbox-danger input:checked ~ label::before {
+  color: var(--checkbox-color-checked-danger);
+  background-color: var(--checkbox-bg-checked-danger);
+}
+.checkbox.checkbox-xs label {
+  padding-left: calc(var(--checkbox-size-xs) + 0.55rem);
+  height: var(--checkbox-size-xs);
+}
+.checkbox.checkbox-xs label::after {
+  width: var(--checkbox-size-xs);
+  height: var(--checkbox-size-xs);
+  background-size: calc(var(--checkbox-size-xs) / 2);
+  margin-top: calc(var(--checkbox-offset-top-xs) * -1);
+}
+.checkbox.checkbox-xs label::before {
+  width: var(--checkbox-size-xs);
+  height: var(--checkbox-size-xs);
+  margin-top: calc(var(--checkbox-offset-top-xs) * -1);
+}
+.checkbox.checkbox-sm label {
+  padding-left: calc(var(--checkbox-size-sm) + 0.55rem);
+  height: var(--checkbox-size-sm);
+}
+.checkbox.checkbox-sm label::after {
+  width: var(--checkbox-size-sm);
+  height: var(--checkbox-size-sm);
+  background-size: calc(var(--checkbox-size-sm) / 2);
+  margin-top: calc(var(--checkbox-offset-top-sm) * -1);
+}
+.checkbox.checkbox-sm label::before {
+  width: var(--checkbox-size-sm);
+  height: var(--checkbox-size-sm);
+  margin-top: calc(var(--checkbox-offset-top-sm) * -1);
+}
+.checkbox.checkbox-lg label {
+  padding-left: calc(var(--checkbox-size-lg) + 0.55rem);
+  height: var(--checkbox-size-lg);
+}
+.checkbox.checkbox-lg label::after {
+  width: var(--checkbox-size-lg);
+  height: var(--checkbox-size-lg);
+  background-size: calc(var(--checkbox-size-lg) / 2);
+  margin-top: calc(var(--checkbox-offset-top-lg) * -1);
+}
+.checkbox.checkbox-lg label::before {
+  width: var(--checkbox-size-lg);
+  height: var(--checkbox-size-lg);
+  margin-top: calc(var(--checkbox-offset-top-lg) * -1);
+}
+.checkbox.checkbox-xl label {
+  padding-left: calc(var(--checkbox-size-xl) + 0.55rem);
+  height: var(--checkbox-size-xl);
+}
+.checkbox.checkbox-xl label::after {
+  width: var(--checkbox-size-xl);
+  height: var(--checkbox-size-xl);
+  background-size: calc(var(--checkbox-size-xl) / 2);
+  margin-top: calc(var(--checkbox-offset-top-xl) * -1);
+}
+.checkbox.checkbox-xl label::before {
+  width: var(--checkbox-size-xl);
+  height: var(--checkbox-size-xl);
+  margin-top: calc(var(--checkbox-offset-top-xl) * -1);
+}
+/* Radio */
+.radio {
+  position: relative;
+  /* Primary */
+  /* Secondary */
+  /* Success */
+  /* Info */
+  /* Warning */
+  /* Danger */
+  /* XS */
+  /* SM */
+  /* LG */
+  /* XL */
+}
+.radio input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.radio label {
+  padding-left: calc(var(--radio-size) + 0.55rem);
+  padding-right: 1.25rem;
+  height: var(--radio-size);
+}
+.radio label::after {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  display: block;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  line-height: calc(var(--radio-size) - 0.25rem);
+  text-align: center;
+  font-size: calc(var(--radio-size) * 1.4);
+  color: var(--radio-color);
+  margin-top: calc(var(--radio-offset-top) * -1);
+  z-index: 1;
+}
+.radio label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  display: block;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  pointer-events: none;
+  content: '';
+  user-select: none;
+  border-radius: 50%;
+  background-color: var(--radio-bg);
+  border-style: solid;
+  border-width: var(--radio-border-width);
+  border-color: var(--radio-border-color);
+  cursor: pointer;
+  transition: var(--radio-speed) color, var(--radio-speed) background;
+  box-shadow: inset 0 -40px 50px -50px rgba(0, 0, 0, 0.2);
+  margin-top: calc(var(--radio-offset-top) * -1);
+  z-index: 0;
+}
+.radio input:checked ~ label::after {
+  content: '\02022';
+}
+.radio input:checked ~ label::before {
+  color: var(--radio-color-checked);
+  background-color: var(--radio-bg-checked);
+}
+.radio:hover label::before {
+  background-color: var(--radio-bg-hover);
+}
+.radio:hover input:checked:not(:disabled) ~ label::before {
+  box-shadow: inset 0 0 0 1000px var(--color-black-alpha-20);
+}
+.radio input:disabled ~ label {
+  color: var(--radio-color-disabled);
+}
+.radio input:disabled ~ label::after {
+  background: transparent;
+}
+.radio input:disabled ~ label::before {
+  color: transparent;
+  border-color: transparent;
+  background-color: var(--radio-bg-disabled);
+  box-shadow: none;
+}
+.radio.inline {
+  margin-right: 2rem;
+}
+.radio.radio-primary input:checked ~ label::before {
+  color: var(--radio-color-checked-primary);
+  background-color: var(--radio-bg-checked-primary);
+}
+.radio.radio-secondary input:checked ~ label::before {
+  color: var(--radio-color-checked-secondary);
+  background-color: var(--radio-bg-checked-secondary);
+}
+.radio.radio-success input:checked ~ label::before {
+  color: var(--radio-color-checked-success);
+  background-color: var(--radio-bg-checked-success);
+}
+.radio.radio-info input:checked ~ label::before {
+  color: var(--radio-color-checked-info);
+  background-color: var(--radio-bg-checked-info);
+}
+.radio.radio-warning input:checked ~ label::before {
+  color: var(--radio-color-checked-warning);
+  background-color: var(--radio-bg-checked-warning);
+}
+.radio.radio-danger input:checked ~ label::before {
+  color: var(--radio-color-checked-danger);
+  background-color: var(--radio-bg-checked-danger);
+}
+.radio.radio-xs label {
+  padding-left: calc(var(--radio-size-xs) + 0.55rem);
+  height: var(--radio-size-xs);
+}
+.radio.radio-xs label::after {
+  width: var(--radio-size-xs);
+  height: var(--radio-size-xs);
+  line-height: calc(var(--radio-size-xs) - 0.2rem);
+  font-size: calc(var(--radio-size-xs) * 1.4);
+  background-size: calc(var(--radio-size-xs) / 2);
+  margin-top: calc(var(--radio-offset-top-xs) * -1);
+}
+.radio.radio-xs label::before {
+  width: var(--radio-size-xs);
+  height: var(--radio-size-xs);
+  margin-top: calc(var(--radio-offset-top-xs) * -1);
+}
+.radio.radio-sm label {
+  padding-left: calc(var(--radio-size-sm) + 0.55rem);
+  height: var(--radio-size-sm);
+}
+.radio.radio-sm label::after {
+  width: var(--radio-size-sm);
+  height: var(--radio-size-sm);
+  line-height: calc(var(--radio-size-sm) - 0.2rem);
+  font-size: calc(var(--radio-size-sm) * 1.4);
+  background-size: calc(var(--radio-size-sm) / 2);
+  margin-top: calc(var(--radio-offset-top-sm) * -1);
+}
+.radio.radio-sm label::before {
+  width: var(--radio-size-sm);
+  height: var(--radio-size-sm);
+  margin-top: calc(var(--radio-offset-top-sm) * -1);
+}
+.radio.radio-lg label {
+  padding-left: calc(var(--radio-size-lg) + 0.55rem);
+  height: var(--radio-size-lg);
+}
+.radio.radio-lg label::after {
+  width: var(--radio-size-lg);
+  height: var(--radio-size-lg);
+  line-height: calc(var(--radio-size-lg) - 0.32rem);
+  font-size: calc(var(--radio-size-lg) * 1.4);
+  background-size: calc(var(--radio-size-lg) / 2);
+  margin-top: calc(var(--radio-offset-top-lg) * -1);
+}
+.radio.radio-lg label::before {
+  width: var(--radio-size-lg);
+  height: var(--radio-size-lg);
+  margin-top: calc(var(--radio-offset-top-lg) * -1);
+}
+.radio.radio-xl label {
+  padding-left: calc(var(--radio-size-xl) + 0.55rem);
+  height: var(--radio-size-xl);
+}
+.radio.radio-xl label::after {
+  width: var(--radio-size-xl);
+  height: var(--radio-size-xl);
+  line-height: calc(var(--radio-size-xl) - 0.35rem);
+  font-size: calc(var(--radio-size-xl) * 1.4);
+  background-size: calc(var(--radio-size-xl) / 2);
+  margin-top: calc(var(--radio-offset-top-xl) * -1);
+}
+.radio.radio-xl label::before {
+  width: var(--radio-size-xl);
+  height: var(--radio-size-xl);
+  margin-top: calc(var(--radio-offset-top-xl) * -1);
 }
 /* Input icons */
 .input-icon {
@@ -2175,6 +2864,86 @@ input[type="range"]:focus::-ms-fill-upper {
   flex-wrap: wrap;
   margin-right: calc(var(--grid-gutter-width) / -2);
   margin-left: calc(var(--grid-gutter-width) / -2);
+}
+/* Form row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--grid-gutter-width) / -4);
+  margin-left: calc(var(--grid-gutter-width) / -4);
+}
+.form-row > .col,
+.form-row > .col-auto,
+.form-row > .col-1,
+.form-row > .col-2,
+.form-row > .col-3,
+.form-row > .col-4,
+.form-row > .col-5,
+.form-row > .col-6,
+.form-row > .col-7,
+.form-row > .col-8,
+.form-row > .col-9,
+.form-row > .col-10,
+.form-row > .col-11,
+.form-row > .col-12,
+.form-row > .col-sm,
+.form-row > .col-sm-auto,
+.form-row > .col-sm-1,
+.form-row > .col-sm-2,
+.form-row > .col-sm-3,
+.form-row > .col-sm-4,
+.form-row > .col-sm-5,
+.form-row > .col-sm-6,
+.form-row > .col-sm-7,
+.form-row > .col-sm-8,
+.form-row > .col-sm-9,
+.form-row > .col-sm-10,
+.form-row > .col-sm-11,
+.form-row > .col-sm-12,
+.form-row > .col-md,
+.form-row > .col-md-auto,
+.form-row > .col-md-1,
+.form-row > .col-md-2,
+.form-row > .col-md-3,
+.form-row > .col-md-4,
+.form-row > .col-md-5,
+.form-row > .col-md-6,
+.form-row > .col-md-7,
+.form-row > .col-md-8,
+.form-row > .col-md-9,
+.form-row > .col-md-10,
+.form-row > .col-md-11,
+.form-row > .col-md-12,
+.form-row > .col-lg,
+.form-row > .col-lg-auto,
+.form-row > .col-lg-1,
+.form-row > .col-lg-2,
+.form-row > .col-lg-3,
+.form-row > .col-lg-4,
+.form-row > .col-lg-5,
+.form-row > .col-lg-6,
+.form-row > .col-lg-7,
+.form-row > .col-lg-8,
+.form-row > .col-lg-9,
+.form-row > .col-lg-10,
+.form-row > .col-lg-11,
+.form-row > .col-lg-12,
+.form-row > .col-xl,
+.form-row > .col-xl-auto,
+.form-row > .col-xl-1,
+.form-row > .col-xl-2,
+.form-row > .col-xl-3,
+.form-row > .col-xl-4,
+.form-row > .col-xl-5,
+.form-row > .col-xl-6,
+.form-row > .col-xl-7,
+.form-row > .col-xl-8,
+.form-row > .col-xl-9,
+.form-row > .col-xl-10,
+.form-row > .col-xl-11,
+.form-row > .col-xl-12 {
+  padding-right: calc(var(--grid-gutter-width) / 4);
+  padding-left: calc(var(--grid-gutter-width) / 4);
 }
 .row-flush {
   margin-left: 0;
@@ -3000,6 +3769,38 @@ input[type="range"]:focus::-ms-fill-upper {
     margin-left: 91.666667%;
   }
 }
+/*
+List groups
+
+Markup:
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+</div>
+*/
+.list-group {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--list-group-elevation-shadow);
+  background-color: var(--list-group-bg-color);
+  border-radius: var(--list-group-border-radius);
+  width: 100%;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: var(--list-group-padding);
+  margin-bottom: -1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.list-group-item:last-child {
+  border-bottom: 0;
+}
 /*! Loaders */
 .loader {
   width: var(--loader-size);
@@ -3038,20 +3839,29 @@ input[type="range"]:focus::-ms-fill-upper {
   height: var(--loader-size-xl);
   border-width: var(--loader-thickness-xl);
 }
-.loader.intent-primary {
+.loader.loader-primary {
   border-color: var(--loader-color-primary);
 }
-.loader.intent-success {
+.loader.loader-secondary {
+  border-color: var(--loader-color-secondary);
+}
+.loader.loader-success {
   border-color: var(--loader-color-success);
 }
-.loader.intent-info {
+.loader.loader-info {
   border-color: var(--loader-color-info);
 }
-.loader.intent-warning {
+.loader.loader-warning {
   border-color: var(--loader-color-warning);
 }
-.loader.intent-danger {
+.loader.loader-danger {
   border-color: var(--loader-color-danger);
+}
+.loader.loader-light {
+  border-color: var(--loader-color-light);
+}
+.loader.loader-dark {
+  border-color: var(--loader-color-dark);
 }
 /* Background loaders */
 .loader-bg {
@@ -3145,6 +3955,61 @@ input[type="range"]:focus::-ms-fill-upper {
     transform: rotate(360deg);
   }
 }
+/*
+Navbars
+
+Markup:
+<nav class="navbar">
+  <div class="navbar-group align-left">
+    <div class="navbar-heading">Chipolette</div>
+    <input class="input" placeholder="Search files..." type="text" />
+  </div>
+  <div class="navbar-group align-right">
+    <button class="button minimal icon-home">Home</button>
+    <button class="button minimal icon-document">Files</button>
+    <span class="navbar-divider"></span>
+    <button class="button minimal icon-user"></button>
+    <button class="button minimal icon-notifications"></button>
+    <button class="button minimal icon-cog"></button>
+  </div>
+</nav>
+*/
+.navbar {
+  position: relative;
+  z-index: 10;
+  box-shadow: var(--navbar-elevation-shadow);
+  background-color: var(--navbar-bg-color);
+  border-radius: var(--navbar-border-radius);
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 var(--navbar-padding);
+}
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.navbar-heading {
+  margin-right: var(--navbar-padding);
+  font-size: var(--font-size-lg);
+}
+.navbar-group {
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
+}
+.navbar-group.align-left {
+  float: left;
+}
+.navbar-group.align-right {
+  float: right;
+}
+.navbar-divider {
+  margin: 0 var(--spacing-xs);
+  border-left: 1px solid var(--divider-color-black);
+  height: calc(var(--navbar-height) - var(--spacing-xs) * 3);
+}
 /*! Progress Bars */
 .progress {
   position: relative;
@@ -3198,19 +4063,22 @@ input[type="range"]:focus::-ms-fill-upper {
   height: var(--progress-height-xl);
   line-height: var(--progress-height-xl);
 }
-.progress.intent-primary .progress-bar {
+.progress.progress-primary .progress-bar {
   background-color: var(--state-primary);
 }
-.progress.intent-success .progress-bar {
+.progress.progress-secondary .progress-bar {
+  background-color: var(--state-secondary);
+}
+.progress.progress-success .progress-bar {
   background-color: var(--state-success);
 }
-.progress.intent-info .progress-bar {
+.progress.progress-info .progress-bar {
   background-color: var(--state-info);
 }
-.progress.intent-warning .progress-bar {
+.progress.progress-warning .progress-bar {
   background-color: var(--state-warning);
 }
-.progress.intent-danger .progress-bar {
+.progress.progress-danger .progress-bar {
   background-color: var(--state-danger);
 }
 @keyframes progress-indeterminate {
@@ -3344,6 +4212,21 @@ table.table-striped tr:nth-child(odd) td {
   color: var(--state-dark) !important;
 }
 /* Text style */
+.text-xs {
+  font-size: var(--font-size-xs) !important;
+}
+.text-sm {
+  font-size: var(--font-size-sm) !important;
+}
+.text-md {
+  font-size: var(--font-size-md) !important;
+}
+.text-lg {
+  font-size: var(--font-size-lg) !important;
+}
+.text-xl {
+  font-size: var(--font-size-xl) !important;
+}
 .text-small {
   font-size: var(--font-size-small) !important;
 }
@@ -3355,6 +4238,10 @@ table.table-striped tr:nth-child(odd) td {
 }
 .text-muted {
   color: var(--body-color-muted) !important;
+}
+.icon-only {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 /* Text alignment */
 .text-left {
@@ -3409,6 +4296,24 @@ table.table-striped tr:nth-child(odd) td {
 }
 .bg-dark {
   background-color: var(--state-dark) !important;
+}
+/***************************************************************************************************
+* Elevation utilities
+***************************************************************************************************/
+.elevation-0 {
+  box-shadow: var(--elevation-shadow-0) !important;
+}
+.elevation-1 {
+  box-shadow: var(--elevation-shadow-1) !important;
+}
+.elevation-2 {
+  box-shadow: var(--elevation-shadow-2) !important;
+}
+.elevation-3 {
+  box-shadow: var(--elevation-shadow-3) !important;
+}
+.elevation-4 {
+  box-shadow: var(--elevation-shadow-4) !important;
 }
 /***************************************************************************************************
 * Display utilities

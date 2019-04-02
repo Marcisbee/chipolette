@@ -1,0 +1,62 @@
+/*
+Navbars
+
+Markup:
+<nav class="navbar">
+  <div class="navbar-group align-left">
+    <div class="navbar-heading">Chipolette</div>
+    <input class="input" placeholder="Search files..." type="text" />
+  </div>
+  <div class="navbar-group align-right">
+    <button class="button minimal icon-home">Home</button>
+    <button class="button minimal icon-document">Files</button>
+    <span class="navbar-divider"></span>
+    <button class="button minimal icon-user"></button>
+    <button class="button minimal icon-notifications"></button>
+    <button class="button minimal icon-cog"></button>
+  </div>
+</nav>
+*/
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  box-shadow: var(--navbar-elevation-shadow);
+  background-color: var(--navbar-bg-color);
+  border-radius: var(--navbar-border-radius);
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 var(--navbar-padding);
+
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.navbar-heading {
+  margin-right: var(--navbar-padding);
+  font-size: var(--font-size-lg);
+}
+
+.navbar-group {
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
+
+  &.align-left {
+    float: left;
+  }
+
+  &.align-right {
+    float: right;
+  }
+}
+
+.navbar-divider {
+  margin: 0 var(--spacing-xs);
+  border-left: 1px solid var(--divider-color-black);
+  height: calc(var(--navbar-height) - var(--spacing-xs) * 3);
+}

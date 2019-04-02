@@ -1,0 +1,35 @@
+/*
+List groups
+
+Markup:
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+</div>
+*/
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--list-group-elevation-shadow);
+  background-color: var(--list-group-bg-color);
+  border-radius: var(--list-group-border-radius);
+  width: 100%;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: var(--list-group-padding);
+  margin-bottom: -1px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

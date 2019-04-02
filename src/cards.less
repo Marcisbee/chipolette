@@ -1,0 +1,16 @@
+/*! Cards */
+
+.card {
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-bg-color);
+  padding: var(--card-padding);
+  box-shadow: var(--card-elevation-shadow);
+
+  &.interactive {
+    transition: transform .2s cubic-bezier(.4,1,.75,.9),box-shadow .2s cubic-bezier(.4,1,.75,.9),-webkit-transform .2s cubic-bezier(.4,1,.75,.9),-webkit-box-shadow .2s cubic-bezier(.4,1,.75,.9);
+
+    &:hover {
+      box-shadow: var(--elevation-shadow-4) !important;
+    }
+  }
+}

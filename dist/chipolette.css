@@ -1544,7 +1544,7 @@ button.disabled,
 }
 button.btn-block,
 .btn.btn-block {
-  width: 100% !important;
+  width: 100%;
   display: block;
 }
 button.btn-link,

@@ -98,10 +98,12 @@
 * Float utilities
 ***************************************************************************************************/
 
-.clearfix::before,
-.clearfix::after {
-  content: '';
-  display: table;
+.clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
 }
 
 .clearfix::after {

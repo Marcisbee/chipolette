@@ -389,6 +389,12 @@ input[type="range"] {
   }
 }
 
+.radio label,
+.checkbox label {
+  display: inline-block;
+  position: relative;
+}
+
 /* Checkbox */
 .checkbox {
   position: relative;
@@ -407,12 +413,14 @@ input[type="range"] {
     padding-left: calc(var(--checkbox-size) + .55rem);
     padding-right: 1.25rem;
     height: var(--checkbox-size);
+    line-height: var(--checkbox-size);
 
     &:empty {
-      width: var(--checkbox-size);
-      height: var(--checkbox-size);
+      width: calc(var(--checkbox-size) - 1px);
+      height: calc(var(--checkbox-size) - 1px);
       padding-left: 0 !important;
       padding-right: 0 !important;
+      margin-bottom: 0;
     }
 
     &::after {
@@ -628,12 +636,14 @@ input[type="range"] {
     padding-left: calc(var(--radio-size) + .55rem);
     padding-right: 1.25rem;
     height: var(--radio-size);
+    line-height: var(--radio-size);
 
     &:empty {
-      width: var(--checkbox-size);
-      height: var(--checkbox-size);
+      width: calc(var(--radio-size) - 1px);
+      height: calc(var(--radio-size) - 1px);
       padding-left: 0 !important;
       padding-right: 0 !important;
+      margin-bottom: 0;
     }
 
     &::after {

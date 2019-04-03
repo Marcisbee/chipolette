@@ -8,6 +8,7 @@
     <meta name="description" content="Starter kit fork from Shoelace and Bootstrap, that fully embraces CSS variables / custom properties">
     <link rel="icon" href="./assets/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" />
+    <link rel="stylesheet" href="../chipolette/dist/chipolette.css" />
     <link rel="stylesheet" href="./docs.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans:400|Bitter:700" />
@@ -25,6 +26,9 @@
           <div class="menu">
             <a href="#motivation" class="btn btn-block btn-link text-right">Motivation</a>
             <a href="#installation" class="btn btn-block btn-link text-right">Installation</a>
+            <a href="#text-inputs" class="btn btn-block btn-link text-right">Text inputs</a>
+            <a href="#checkboxes" class="btn btn-block btn-link text-right">Checkboxes</a>
+            <a href="#radios" class="btn btn-block btn-link text-right">Radios</a>
             <a href="#buttons" class="btn btn-block btn-link text-right">Buttons</a>
             <a href="#navbars" class="btn btn-block btn-link text-right">Navbars</a>
             <a href="#alerts" class="btn btn-block btn-link text-right">Alerts</a>
@@ -74,88 +78,602 @@
           <p>Every evergreen browser and older ones that support CSS variables. But for older IE versions (and other outdated
           browsers) there is a polyfill.</p>
 
-          <h2 id="buttons">Buttons</h2>
+          <h2 id="text-inputs">Text inputs</h2>
 
-          <div class="card mb-md">
-            <div class="card-body">
-              <button type="button" class="btn-xs">XS Button</button>
-              <button type="button" class="btn-sm">SM Button</button>
-              <button type="button">Default Button</button>
-              <button type="button" class="btn-lg">LG Button</button>
-              <button type="button" class="btn-xl">XL Button</button>
-              <br />
-              <br />
-              <button disabled class="btn-primary btn-loader">test</button>
-              <button class="btn-primary btn-loader">test</button>
-              <button class="btn-primary">primary</button>
-              <button class="btn-primary active">primary</button>
-              <button class="btn-primary disabled">primary</button>
-              <br />
-              <br />
-              <button disabled class="btn-secondary btn-loader">test</button>
-              <button class="btn-secondary btn-loader">test</button>
-              <button class="btn-secondary">secondary</button>
-              <button class="btn-secondary active">secondary</button>
-              <button class="btn-secondary disabled">secondary</button>
-              <br />
-              <br />
-              <button disabled class="btn-success btn-loader">test</button>
-              <button class="btn-success btn-loader">test</button>
-              <button class="btn-success">success</button>
-              <button class="btn-success active">success</button>
-              <button class="btn-success disabled">success</button>
-              <br />
-              <br />
-              <button disabled class="btn-info btn-loader">test</button>
-              <button class="btn-info btn-loader">test</button>
-              <button class="btn-info">info</button>
-              <button class="btn-info active">info</button>
-              <button class="btn-info disabled">info</button>
-              <br />
-              <br />
-              <button disabled class="btn-warning btn-loader">test</button>
-              <button class="btn-warning btn-loader">test</button>
-              <button class="btn-warning">warning</button>
-              <button class="btn-warning active">warning</button>
-              <button class="btn-warning disabled">warning</button>
-              <br />
-              <br />
-              <button disabled class="btn-danger btn-loader">test</button>
-              <button class="btn-danger btn-loader">test</button>
-              <button class="btn-danger">danger</button>
-              <button class="btn-danger active">danger</button>
-              <button class="btn-danger disabled">danger</button>
-              <br />
-              <br />
-              <button disabled class="btn-light btn-loader">asd</button>
-              <button class="btn-light btn-loader">asd</button>
-              <button class="btn-light">asd</button>
-              <button class="btn-light active">asd</button>
-              <button class="btn-light disabled">asd</button>
-              <br />
-              <br />
-              <button disabled class="btn-dark btn-loader">asd</button>
-              <button class="btn-dark btn-loader">asd</button>
-              <button class="btn-dark">asd</button>
-              <button class="btn-dark active">asd</button>
-              <button class="btn-dark disabled">asd</button>
-              <br />
-              <br />
-              <button disabled class="btn-minimal btn-loader">asd</button>
-              <button class="btn-minimal btn-loader">asd</button>
-              <button class="btn-minimal">asd</button>
-              <button class="btn-minimal active">asd</button>
-              <button class="btn-minimal disabled">asd</button>
-              <br />
-              <br />
+          <div class="row">
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">default</code>
+              <div class="mt-sm">
+                <input type="text" placeholder="Text input" class="w-80" />
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:disabled</code>
+              <div class="mt-sm">
+                <input type="text" placeholder="Text input" class="w-80" disabled />
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:readonly</code>
+              <div class="mt-sm">
+                <input type="text" placeholder="Text input" class="w-80" readonly />
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.input-invalid (wrapper)</code>
+              <div class="mt-sm input-invalid">
+                <input type="text" placeholder="Text input" class="w-80" />
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.input-valid (wrapper)</code>
+              <div class="mt-sm input-valid">
+                <input type="text" placeholder="Text input" class="w-80" />
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.input-xs</code>
+              <div class="mt-sm">
+                <input type="text" placeholder="Text input" class="w-80 input-xs" />
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.input-lg</code>
+              <div class="mt-sm">
+                <input type="text" placeholder="Text input" class="w-80 input-lg" />
+              </div>
             </div>
           </div>
 
-          <pre class="mb-md"><code class="language-html">&lt;button disabled class="btn-primary btn-loader">test&lt;/button&gt;
-&lt;button class="btn-primary btn-loader"&gt;test&lt;/button&gt;
-&lt;button class="btn-primary"&gt;primary&lt;/button&gt;
-&lt;button class="btn-primary active"&gt;primary&lt;/button&gt;
-&lt;button class="btn-primary disabled"&gt;primary&lt;/button&gt;</code></pre>
+          <pre class="mb-md"><code class="language-html">&lt;input class="pt-input .modifier" :modifier type="text" placeholder="Text input" /&gt;</code></pre>
+
+          <h2 id="checkboxes">Checkboxes</h2>
+
+          <div class="row">
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">default</code>
+              <div class="mt-sm">
+                <div class="checkbox">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:checked</code>
+              <div class="mt-sm">
+                <div class="checkbox">
+                  <input type="checkbox" checked />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:disabled</code>
+              <div class="mt-sm">
+                <div class="checkbox">
+                  <input type="checkbox" disabled />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-primary</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-primary">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-secondary</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-secondary">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-success</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-success">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-info</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-info">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-warning</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-warning">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-danger</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-danger">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-sm</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-sm">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.checkbox-lg</code>
+              <div class="mt-sm">
+                <div class="checkbox checkbox-lg">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <pre class="mb-md"><code class="language-html">&lt;div class="checkbox .modifier"&gt;
+  &lt;input type="checkbox" :modifier /&gt;
+  &lt;label&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+          <h2 id="radios">Radios</h2>
+
+          <div class="row">
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">default</code>
+              <div class="mt-sm">
+                <div class="radio">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:checked</code>
+              <div class="mt-sm">
+                <div class="radio">
+                  <input type="radio" checked />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:disabled</code>
+              <div class="mt-sm">
+                <div class="radio">
+                  <input type="radio" disabled />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-primary</code>
+              <div class="mt-sm">
+                <div class="radio radio-primary">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-secondary</code>
+              <div class="mt-sm">
+                <div class="radio radio-secondary">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-success</code>
+              <div class="mt-sm">
+                <div class="radio radio-success">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-info</code>
+              <div class="mt-sm">
+                <div class="radio radio-info">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-warning</code>
+              <div class="mt-sm">
+                <div class="radio radio-warning">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-danger</code>
+              <div class="mt-sm">
+                <div class="radio radio-danger">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-sm</code>
+              <div class="mt-sm">
+                <div class="radio radio-sm">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.radio-lg</code>
+              <div class="mt-sm">
+                <div class="radio radio-lg">
+                  <input type="radio" />
+                  <label>Radio</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <pre class="mb-md"><code class="language-html">&lt;div class="radio .modifier"&gt;
+  &lt;input type="radio" :modifier /&gt;
+  &lt;label&gt;Radio&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+          <h4>Text input variables</h4>
+          
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Variable name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-height</code></td>
+                <td>Used for <code class="text-sm">input</code> as height
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">2.4rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-height-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">1.35rem|2rem|3rem|3.35rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-size</code></td>
+                <td>Used for <code class="text-sm">input</code> as font size
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">1rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-size-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">.625rem|.875rem|1.25rem|1.5rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-family</code></td>
+                <td>Used for <code class="text-sm">input</code> as font size
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-weight</code></td>
+                <td>Used for <code class="text-sm">input</code> as font weight
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-radius</code></td>
+                <td>Used for <code class="text-sm">input</code> as border radius
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-radius</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-width</code></td>
+                <td>Used for <code class="text-sm">input</code> as border width
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-width</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-color</code></td>
+                <td>Used for <code class="text-sm">input</code> as border color
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-color</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-speed</code></td>
+                <td>Used for <code class="text-sm">input</code> as animation/transition speed for background, color and border
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-speed</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-loader-size</code></td>
+                <td>Used for <code class="text-sm">input</code> as spinner diameter
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">1em</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--label-color</code></td>
+                <td>Used for <code class="text-sm">label</code> as color
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="buttons">Buttons</h2>
+
+          <div class="row">
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">default</code>
+              <div class="mt-sm">
+                <a role="button" class="btn mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm text-info">:disabled</code>
+              <div class="mt-sm">
+                <a role="button" class="btn mr-xs" disabled tabindex="0">Anchor</a>
+                <button type="button" class="btn" disabled>Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.disabled</code>
+              <div class="mt-sm">
+                <a role="button" class="btn disabled mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn disabled">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-primary</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-primary mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-primary">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-secondary</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-secondary mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-secondary">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-success</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-success mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-success">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-info</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-info mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-info">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-warning</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-warning mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-warning">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-danger</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-danger mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-danger">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-light</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-light mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-light">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-dark</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-dark mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-dark">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-minimal</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-minimal mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-minimal">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.active</code>
+              <div class="mt-sm">
+                <a role="button" class="btn active mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn active">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-lg</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-lg mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-lg">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-sm</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-sm mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-sm">Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-loader</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-loader mr-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-loader">Button</button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">.btn-icon-only</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-icon-only mr-xs" tabindex="0"><i class="material-icons">settings</i></a>
+                <button type="button" class="btn btn-icon-only"><i class="material-icons">settings</i></button>
+              </div>
+            </div>
+            <div class="col col-sm-4 mb-lg">
+              <code class="text-sm">`with icon`</code>
+              <div class="mt-sm">
+                <a role="button" class="btn mr-xs" tabindex="0"><i class="material-icons mr-xs">settings</i>Anchor</a>
+                <button type="button" class="btn"><i class="material-icons mr-xs">settings</i>Button</button>
+              </div>
+            </div>
+
+            <div class="col col-sm-12 mb-lg">
+              <code class="text-sm">.btn-block</code>
+              <div class="mt-sm">
+                <a role="button" class="btn btn-block mb-xs" tabindex="0">Anchor</a>
+                <button type="button" class="btn btn-block">Button</button>
+              </div>
+            </div>
+          </div>
+
+          <pre class="mb-md"><code class="language-html">// Example usage
+&lt;a role="button" class="btn" tabindex="0">Anchor&lt;/a&gt;
+&lt;button type="button" class="btn"&gt;Button&lt;/button&gt;
+
+&lt;a role="button" class="btn" tabindex="0"&gt;&lt;i class="material-icons mr-xs"&gt;settings&lt;/i&gt;Anchor&lt;/a&gt;
+&lt;button type="button" class="btn"&gt;&lt;i class="material-icons mr-xs"&gt;settings&lt;/i&gt;Button&lt;/button&gt;</code></pre>
+
+          <h4>Button variables</h4>
+
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Variable name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-height</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as height
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--input-height</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-height-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">--input-height-xs|sm|lg|xl</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-font-size</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as font size
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--input-font-size</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-font-size-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">--input-font-size-xs|sm|lg|xl</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-font-family</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as font size
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--input-font-family</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-font-weight</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as font weight
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--input-font-weight</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-border-radius</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as border radius
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--component-border-radius</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-border-width</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as border width
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--component-border-width</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-speed</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as animation/transition speed for background and color
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--component-speed</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-loader-size</code></td>
+                <td>Used for <code class="text-sm">.btn</code> as spinner diameter
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">1em</code>)</i></td>
+              </tr>
+
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-color</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as color
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--color-navy</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-color-hover|active|disabled</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as color for .hov state
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--button-color</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-bg-color</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as background color
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--color-white</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-bg-color-hover|active|disabled</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as background color for .hov state
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--button-bg-color</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-border-color</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as border color
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--color-black-alpha-20</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--button-border-color-hover|active|disabled</code>
+                  <br/><i class="text-sm">* supports color states</i></td>
+                <td>Used for <code class="text-sm">.btn</code> as border color for .hov state
+                  <br/><i class="text-sm">(defaults to <code class="text-sm">--button-border-color</code>)</i></td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2 id="navbars">Navbars</h2>
 
@@ -167,7 +685,7 @@
                   <input class="input" placeholder="Search files..." type="text" />
                 </div>
                 <div class="navbar-group align-right">
-                  <button class="btn btn-minimal text-md"><i class="material-icons pad-r-xs text-lg">home</i>Home</button>
+                  <button class="btn btn-minimal text-md"><i class="material-icons pr-xs text-lg">home</i>Home</button>
                   <span class="navbar-divider"></span>
                   <button class="btn btn-minimal icon-only"><i class="material-icons text-lg">account_circle</i></button>
                   <button class="btn btn-minimal icon-only"><i class="material-icons text-lg">notifications</i></button>
@@ -184,7 +702,7 @@
   &lt;/div&gt;
   &lt;div class="navbar-group align-right"&gt;
     &lt;button class="btn btn-minimal text-md"&gt;
-      &lt;i class="material-icons pad-r-xs text-lg"&gt;home&lt;/i&gt;Home&lt;/button&gt;
+      &lt;i class="material-icons pr-xs text-lg"&gt;home&lt;/i&gt;Home&lt;/button&gt;
     &lt;span class="navbar-divider"&gt;&lt;/span&gt;
     &lt;button class="btn btn-minimal icon-only"&gt;
       &lt;i class="material-icons text-lg"&gt;account_circle&lt;/i&gt;&lt;/button&gt;
@@ -221,7 +739,7 @@
     <footer class="mt-xl text-center text-muted text-small">
       <div class="container">
 
-        <p class="mar-y-sm text-center">
+        <p class="my-sm text-center">
           <a href="https://twitter.com/marcisbee?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large"
             data-show-screen-name="false" data-show-count="false">Follow @marcisbee</a>
           <a class="github-button" href="https://github.com/Marcisbee/chipolette" data-icon="octicon-star" data-size="large"

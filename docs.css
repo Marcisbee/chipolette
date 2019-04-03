@@ -37,6 +37,21 @@ h1, h2 {
   margin: 0 auto 0.8rem;
 }
 
+.doc-table {
+  background-color: #f5eee9;
+  border-radius: 4px;
+}
+
+.doc-table td,
+.doc-table th {
+  border-color: #eadfd7;
+}
+
+.doc-code {
+  background-color: #fff;
+  color: #000;
+}
+
 .menu {
   border-right: 2px solid #ded1cd;
   padding-right: 20px;

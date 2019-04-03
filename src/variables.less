@@ -570,6 +570,10 @@
   --input-focus-color: var(--state-primary);
   --input-speed: var(--component-speed);
 
+  --input-color-disabled: var(--color-gray);
+  --input-bg-color-disabled: #f1f1f1;
+  --input-border-color-disabled: transparent;
+
   --input-addon-bg-color: var(--component-bg-color);
   --input-addon-color: var(--color-disabled);
 
@@ -790,9 +794,10 @@
   --card-footer-border-color: var(--color-black-alpha-10);
   --card-footer-color: var(--color-disabled);
   --card-footer-bg: var(--color-barely-gray);
+  --card-body-bg: var(--color-white);
 
   /* Primary */
-  --card-border-color-primary: var(--state-primary);
+  --card-border-color-primary: var(--color-black-alpha-20);
   --card-header-bg-primary: var(--state-primary);
   --card-header-color-primary: var(--color-white);
   --card-body-bg-primary: var(--state-primary);
@@ -802,7 +807,7 @@
   --card-elevation-shadow-primary: none;
 
   /* Secondary */
-  --card-border-color-secondary: var(--state-secondary);
+  --card-border-color-secondary: var(--color-black-alpha-20);
   --card-header-bg-secondary: var(--state-secondary);
   --card-header-color-secondary: var(--color-white);
   --card-body-bg-secondary: var(--state-secondary);
@@ -812,7 +817,7 @@
   --card-elevation-shadow-secondary: none;
 
   /* Succcess */
-  --card-border-color-success: var(--state-success);
+  --card-border-color-success: var(--color-black-alpha-20);
   --card-header-bg-success: var(--state-success);
   --card-header-color-success: var(--color-white);
   --card-body-bg-success: var(--state-success);
@@ -822,7 +827,7 @@
   --card-elevation-shadow-success: none;
 
   /* Info */
-  --card-border-color-info: var(--state-info);
+  --card-border-color-info: var(--color-black-alpha-20);
   --card-header-bg-info: var(--state-info);
   --card-header-color-info: var(--color-white);
   --card-body-bg-info: var(--state-info);
@@ -832,7 +837,7 @@
   --card-elevation-shadow-info: none;
 
   /* Warning */
-  --card-border-color-warning: var(--state-warning);
+  --card-border-color-warning: var(--color-black-alpha-20);
   --card-header-bg-warning: var(--state-warning);
   --card-header-color-warning: var(--color-white);
   --card-body-bg-warning: var(--state-warning);
@@ -842,7 +847,7 @@
   --card-elevation-shadow-warning: none;
 
   /* Danger */
-  --card-border-color-danger: var(--state-danger);
+  --card-border-color-danger: var(--color-black-alpha-20);
   --card-header-bg-danger: var(--state-danger);
   --card-header-color-danger: var(--color-white);
   --card-body-bg-danger: var(--state-danger);
@@ -901,6 +906,5 @@
 @breakpoint-xl-only: ~'only screen and (min-width: 1200px)';
 
 @breakpoint-mobile: @breakpoint-sm-down;
-@breakpoint-tablet: @breakpoint-md-only;
-@breakpoint-laptop: @breakpoint-lg-only;
-@breakpoint-dekstop: @breakpoint-xl-only;
+@breakpoint-tablet: ~'only screen and (min-width: 576px) and (max-width: 992px)';
+@breakpoint-desktop: @breakpoint-xl-only;

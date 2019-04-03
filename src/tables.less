@@ -1,5 +1,6 @@
 /*! Tables */
 
+.table,
 table {
   width: 100%;
   background-color: var(--table-bg-color);
@@ -45,7 +46,7 @@ table {
   }
 
   &.table-striped {
-    & tr:nth-child(odd) td {
+    & tbody tr:nth-child(odd) td {
       background-color: var(--table-stripe-bg-color);
     }
   }

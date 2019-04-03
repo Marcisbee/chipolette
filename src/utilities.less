@@ -43,19 +43,6 @@
 .text-nowrap { white-space: nowrap !important; }
 
 /***************************************************************************************************
-* Background utilities
-***************************************************************************************************/
-
-.bg-primary { background-color: var(--state-primary) !important; }
-.bg-secondary { background-color: var(--state-secondary) !important; }
-.bg-success { background-color: var(--state-success) !important; }
-.bg-info { background-color: var(--state-info) !important; }
-.bg-warning { background-color: var(--state-warning) !important; }
-.bg-danger { background-color: var(--state-danger) !important; }
-.bg-light { background-color: var(--state-light) !important; }
-.bg-dark { background-color: var(--state-dark) !important; }
-
-/***************************************************************************************************
 * Elevation utilities
 ***************************************************************************************************/
 
@@ -68,6 +55,24 @@
 /***************************************************************************************************
 * Display utilities
 ***************************************************************************************************/
+
+.hide-xl-down,
+.hide-xl-up,
+.hide-xl,
+.hide-lg-down,
+.hide-lg-up,
+.hide-lg,
+.hide-md-down,
+.hide-md-up,
+.hide-md,
+.hide-sm-down,
+.hide-sm-up,
+.hide-sm,
+.hide-xs-down,
+.hide-xs-up,
+.hide-xs {
+  display: initial;
+}
 
 @media @breakpoint-xs-only { .hide-xs { display: none !important; } }
 @media @breakpoint-xs-up { .hide-xs-up { display: none !important; } }

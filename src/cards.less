@@ -1,9 +1,15 @@
 /*! Cards */
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  flex: 1 0 auto;
   border-radius: var(--card-border-radius);
   background-color: var(--card-bg-color);
   box-shadow: var(--card-elevation-shadow);
+  background-color: var(--card-header-bg);
+  margin-bottom: var(--margin-lg);
 
   .card-header {
     border-bottom: 1px solid var(--card-header-border-color);
@@ -19,6 +25,20 @@
 
   .card-body {
     padding: var(--card-padding);
+    background-color: var(--card-body-bg);
+    flex-grow: 1;
+
+    &:last-child {
+      border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+    }
+
+    &:first-child {
+      border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+    }
+
+    &:first-child:last-child  {
+      border-radius: var(--card-border-radius);
+    }
   }
 
   .card-footer {
@@ -48,6 +68,7 @@
     border-style: solid;
     border-color: var(--card-border-color-primary);
     box-shadow: var(--card-elevation-shadow-primary);
+    background-color: var(--card-header-bg-primary);
 
     .card-header {
       background-color: var(--card-header-bg-primary);
@@ -57,13 +78,13 @@
     .card-body {
       background-color: var(--card-body-bg-primary);
       color: var(--card-body-color-primary);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-primary);
       color: var(--card-footer-color-primary);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 
@@ -73,6 +94,7 @@
     border-style: solid;
     border-color: var(--card-border-color-secondary);
     box-shadow: var(--card-elevation-shadow-secondary);
+    background-color: var(--card-header-bg-secondary);
 
     .card-header {
       background-color: var(--card-header-bg-secondary);
@@ -82,13 +104,13 @@
     .card-body {
       background-color: var(--card-body-bg-secondary);
       color: var(--card-body-color-secondary);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-secondary);
       color: var(--card-footer-color-secondary);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 
@@ -98,6 +120,7 @@
     border-style: solid;
     border-color: var(--card-border-color-success);
     box-shadow: var(--card-elevation-shadow-success);
+    background-color: var(--card-header-bg-success);
 
     .card-header {
       background-color: var(--card-header-bg-success);
@@ -107,13 +130,13 @@
     .card-body {
       background-color: var(--card-body-bg-success);
       color: var(--card-body-color-success);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-success);
       color: var(--card-footer-color-success);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 
@@ -123,6 +146,7 @@
     border-style: solid;
     border-color: var(--card-border-color-info);
     box-shadow: var(--card-elevation-shadow-info);
+    background-color: var(--card-header-bg-info);
 
     .card-header {
       background-color: var(--card-header-bg-info);
@@ -132,13 +156,13 @@
     .card-body {
       background-color: var(--card-body-bg-info);
       color: var(--card-body-color-info);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-info);
       color: var(--card-footer-color-info);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 
@@ -148,6 +172,7 @@
     border-style: solid;
     border-color: var(--card-border-color-warning);
     box-shadow: var(--card-elevation-shadow-warning);
+    background-color: var(--card-header-bg-warning);
 
     .card-header {
       background-color: var(--card-header-bg-warning);
@@ -157,13 +182,13 @@
     .card-body {
       background-color: var(--card-body-bg-warning);
       color: var(--card-body-color-warning);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-warning);
       color: var(--card-footer-color-warning);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 
@@ -173,6 +198,7 @@
     border-style: solid;
     border-color: var(--card-border-color-danger);
     box-shadow: var(--card-elevation-shadow-danger);
+    background-color: var(--card-header-bg-danger);
 
     .card-header {
       background-color: var(--card-header-bg-danger);
@@ -182,13 +208,13 @@
     .card-body {
       background-color: var(--card-body-bg-danger);
       color: var(--card-body-color-danger);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
 
     .card-footer {
       background-color: var(--card-footer-bg-danger);
       color: var(--card-footer-color-danger);
-      box-shadow: inset 0 0 0 100px var(--color-white-alpha-20);
+      box-shadow: inset 0 0 0 10000px var(--color-white-alpha-20);
     }
   }
 }

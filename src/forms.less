@@ -26,6 +26,7 @@ label {
   }
 }
 
+.form-control,
 input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
@@ -251,19 +252,19 @@ input[type="range"] {
 
 /* Input fields */
 .input-field {
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--input-margin-bottom);
 }
 
 /* Form group */
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--input-margin-bottom);
 }
 
 /* Input groups */
 .input-group {
   width: 100%;
   display: flex;
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--input-margin-bottom);
   align-items: stretch;
   display: flex;
   position: relative;
@@ -425,22 +426,24 @@ input[type="range"] {
 
     &::after {
       position: absolute;
-      top: .25rem;
+      top: .15rem;
       left: 0;
       display: block;
       width: var(--checkbox-size);
       height: var(--checkbox-size);
       content: '';
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center 70%;
       background-size: calc(var(--checkbox-size) / 2);
       margin-top: calc(var(--checkbox-offset-top) * -1);
       z-index: 1;
+      transition: transform 0.2s, background 0.2s;
+      transform: scale(.4);
     }
 
     &::before {
       position: absolute;
-      top: .25rem;
+      top: .15rem;
       left: 0;
       display: block;
       width: var(--checkbox-size);
@@ -458,12 +461,15 @@ input[type="range"] {
       box-shadow: inset 0 -40px 50px -50px rgba(0, 0, 0, 0.2);
       margin-top: calc(var(--checkbox-offset-top) * -1);
       z-index: 0;
+      transition: all 0.2s;
     }
   }
 
   input:checked ~ label {
     &::after {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+      background-position: center center;
+      transform: scale(1);
     }
 
     &::before {
@@ -648,26 +654,27 @@ input[type="range"] {
 
     &::after {
       position: absolute;
-      top: 0;
+      top: .15rem;
       left: 0;
       display: block;
-      width: calc(var(--radio-size) / 2.5);
-      height: calc(var(--radio-size) / 2.5);
+      width: var(--radio-size);
+      height: var(--radio-size);
       content: '';
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
       background-color: transparent;
       text-align: center;
+      margin-top: calc(var(--radio-offset-top) * -1);
       z-index: 1;
       border-radius: 50%;
-      margin-top: calc(var(--radio-size) / 2.6);
-      margin-left: calc(var(--radio-size) / 3.25);
+      transition: transform 0.2s, background 0.2s;
+      transform: scale(1.5);
     }
 
     &::before {
       position: absolute;
-      top: .25rem;
+      top: .15rem;
       left: 0;
       display: block;
       width: var(--radio-size);
@@ -685,12 +692,14 @@ input[type="range"] {
       box-shadow: inset 0 -40px 50px -50px rgba(0, 0, 0, 0.2);
       margin-top: calc(var(--radio-offset-top) * -1);
       z-index: 0;
+      transition: all 0.2s;
     }
   }
 
   input:checked ~ label {
     &::after {
-      background-color: var(--radio-color);
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Ccircle fill='%23fff' cx='4' cy='4' r='4'/%3E%3C/svg%3E");
+      transform: scale(1);
     }
 
     &::before {
@@ -772,10 +781,9 @@ input[type="range"] {
       height: var(--radio-size-xs);
 
       &::after {
-        width: calc(var(--radio-size-xs) / 2.5);
-        height: calc(var(--radio-size-xs) / 2.5);
-        margin-top: calc(var(--radio-size-xs) / 1.2);
-        margin-left: calc(var(--radio-size-xs) / 3.1);
+        width: var(--radio-size-xs);
+        height: var(--radio-size-xs);
+        margin-top: calc(var(--radio-offset-top-xs) * -1);
       }
 
       &::before {
@@ -793,10 +801,9 @@ input[type="range"] {
       height: var(--radio-size-sm);
 
       &::after {
-        width: calc(var(--radio-size-sm) / 2.5);
-        height: calc(var(--radio-size-sm) / 2.5);
-        margin-top: calc(var(--radio-size-sm) / 1.46);
-        margin-left: calc(var(--radio-size-sm) / 3.25);
+        width: var(--radio-size-sm);
+        height: var(--radio-size-sm);
+        margin-top: calc(var(--radio-offset-top-sm) * -1);
       }
 
       &::before {
@@ -814,10 +821,9 @@ input[type="range"] {
       height: var(--radio-size-lg);
 
       &::after {
-        width: calc(var(--radio-size-lg) / 2.5);
-        height: calc(var(--radio-size-lg) / 2.5);
-        margin-top: calc(var(--radio-size-lg) / 3.65);
-        margin-left: calc(var(--radio-size-lg) / 3.45);
+        width: var(--radio-size-lg);
+        height: var(--radio-size-lg);
+        margin-top: calc(var(--radio-offset-top-lg) * -1);
       }
 
       &::before {
@@ -835,10 +841,9 @@ input[type="range"] {
       height: var(--radio-size-xl);
 
       &::after {
-        width: calc(var(--radio-size-xl) / 2.5);
-        height: calc(var(--radio-size-xl) / 2.5);
-        margin-top: calc(var(--radio-size-xl) / 4.8);
-        margin-left: calc(var(--radio-size-xl) / 3.25);
+        width: var(--radio-size-xl);
+        height: var(--radio-size-xl);
+        margin-top: calc(var(--radio-offset-top-xl) * -1);
       }
 
       &::before {

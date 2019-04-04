@@ -1,5 +1,6 @@
 /*! Dropdowns */
 
+[dropdown],
 .dropdown {
   position: relative;
   display: inline-block;
@@ -40,6 +41,8 @@
     right: var(--dropdown-offset-x);
   }
 
+  &.open .dropdown-menu,
+  &.show .dropdown-menu,
   &.active .dropdown-menu {
     display: block;
   }
@@ -47,6 +50,7 @@
 
 /* Menu */
 .dropdown-menu {
+  display: none;
   position: static;
   z-index: var(--dropdown-z-index);
   min-width: var(--dropdown-min-width);

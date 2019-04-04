@@ -19,8 +19,9 @@ button,
   border-style: solid;
   border-width: var(--button-border-width);
   border-color: var(--button-border-color);
+  min-height: auto;
   height: var(--button-height);
-  line-height: calc(var(--button-height) - var(--button-border-width) * 2);
+  line-height: var(--button-line-height);
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -29,6 +30,7 @@ button,
   display: inline-block;
   transition: var(--button-speed) color, var(--button-speed) background, var(--button-speed) box-shadow;
   box-shadow: @button-shadow;
+  overflow: hidden;
 
   &:focus {
     box-shadow: @button-shadow, @button-shadow-outline var(--state-default);
@@ -368,9 +370,9 @@ button,
 
   > *,
   > .material-icons {
-    vertical-align: top;
-    line-height: calc(var(--button-height) - var(--button-border-width) * 2);
-    font-size: inherit;
+    vertical-align: middle;
+    line-height: inherit !important;
+    font-size: inherit !important;
   }
 }
 

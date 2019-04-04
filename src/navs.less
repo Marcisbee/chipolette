@@ -1,0 +1,29 @@
+/*! Navs */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  &.nav-pills {
+    .nav-link {
+      border-radius: var(--nav-pills-border-radius);
+
+      &.active {
+        color: var(--nav-pills-link-color-active);
+        background-color: var(--nav-pills-link-bg-color-active);
+      }
+    }
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: var(--nav-link-padding);
+
+  &.disabled {
+    color: var(--nav-link-color-disabled);
+  }
+}

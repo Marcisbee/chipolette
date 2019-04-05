@@ -4551,6 +4551,30 @@ Markup:
   right: 1px;
   border-left-color: #fff;
 }
+.bs-popover-top,
+.bs-popover-auto[x-placement^=top] {
+  margin-bottom: 0.5rem;
+}
+.bs-popover-top .arrow,
+.bs-popover-auto[x-placement^=top] .arrow {
+  bottom: calc((0.5rem + 1px) * -1);
+}
+.bs-popover-top .arrow::after,
+.bs-popover-auto[x-placement^=top] .arrow::after,
+.bs-popover-top .arrow::before,
+.bs-popover-auto[x-placement^=top] .arrow::before {
+  border-width: 0.5rem 0.5rem 0 0.5rem;
+}
+.bs-popover-top .arrow::before,
+.bs-popover-auto[x-placement^=top] .arrow::before {
+  bottom: 0;
+  border-top-color: var(--component-border-color);
+}
+.bs-popover-top .arrow::after,
+.bs-popover-auto[x-placement^=top] .arrow::after {
+  bottom: 1px;
+  border-top-color: #fff;
+}
 .bs-popover-bottom,
 .bs-popover-auto[x-placement^=bottom] {
   margin-top: 0.5rem;

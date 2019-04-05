@@ -98,6 +98,30 @@
   }
 }
 
+.bs-popover-top,
+.bs-popover-auto[x-placement^=top] {
+  margin-bottom: .5rem;
+
+  .arrow {
+    bottom: calc((.5rem + 1px) * -1);
+
+    &::after,
+    &::before {
+      border-width: .5rem .5rem 0 .5rem;
+    }
+
+    &::before {
+      bottom: 0;
+      border-top-color: var(--component-border-color);
+    }
+
+    &::after {
+      bottom: 1px;
+      border-top-color: #fff;
+    }
+  }
+}
+
 .bs-popover-bottom,
 .bs-popover-auto[x-placement^=bottom] {
   margin-top: .5rem;

@@ -25,7 +25,7 @@ button,
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  padding: 0 .75em; /* ems for relative sizing */
+  padding: .35em .75em; /* ems for relative sizing */
   cursor: pointer;
   display: inline-block;
   transition: var(--button-speed) color, var(--button-speed) background, var(--button-speed) box-shadow;
@@ -65,25 +65,21 @@ button,
   &.btn-xs {
     font-size: var(--button-font-size-xs);
     height: var(--button-height-xs);
-    line-height: calc(var(--button-height-xs) - var(--button-border-width) * 2);
   }
 
   &.btn-sm {
     font-size: var(--button-font-size-sm);
     height: var(--button-height-sm);
-    line-height: calc(var(--button-height-sm) - var(--button-border-width) * 2);
   }
 
   &.btn-lg {
     font-size: var(--button-font-size-lg);
     height: var(--button-height-lg);
-    line-height: calc(var(--button-height-lg) - var(--button-border-width) * 2);
   }
 
   &.btn-xl {
     font-size: var(--button-font-size-xl);
     height: var(--button-height-xl);
-    line-height: calc(var(--button-height-xl) - var(--button-border-width) * 2);
   }
 
   /* Variations */
@@ -374,6 +370,10 @@ button,
     line-height: inherit !important;
     font-size: inherit !important;
   }
+}
+
+a.btn {
+  line-height: calc(var(--button-height) - var(--button-border-width) * 2)
 }
 
 /* Loader buttons */

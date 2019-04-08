@@ -680,7 +680,7 @@ template {
   --button-speed: var(--component-speed);
   --button-loader-size: 1em;
   --button-loader-border-width: 0.15em;
-  --button-line-height: 1.2rem;
+  --button-line-height: 1.5em;
   /* Default */
   --button-color: var(--color-navy);
   --button-bg-color: var(--color-white);
@@ -784,8 +784,9 @@ template {
   /* Most browsers use a default font size of 16px */
   --font-size-lg: 1.3rem;
   --font-size-xl: 1.8rem;
+  --font-weight: var(--font-weight-normal);
   --font-weight-light: 300;
-  --font-weight: 400;
+  --font-weight-normal: 400;
   --font-weight-bold: 700;
   --line-height: 1.5;
   --code-font-size: 90%;
@@ -1334,7 +1335,7 @@ button,
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  padding: 0 0.75em;
+  padding: 0.35em 0.75em;
   /* ems for relative sizing */
   cursor: pointer;
   display: inline-block;
@@ -1383,25 +1384,21 @@ button.btn-xs,
 .btn.btn-xs {
   font-size: var(--button-font-size-xs);
   height: var(--button-height-xs);
-  line-height: calc(var(--button-height-xs) - var(--button-border-width) * 2);
 }
 button.btn-sm,
 .btn.btn-sm {
   font-size: var(--button-font-size-sm);
   height: var(--button-height-sm);
-  line-height: calc(var(--button-height-sm) - var(--button-border-width) * 2);
 }
 button.btn-lg,
 .btn.btn-lg {
   font-size: var(--button-font-size-lg);
   height: var(--button-height-lg);
-  line-height: calc(var(--button-height-lg) - var(--button-border-width) * 2);
 }
 button.btn-xl,
 .btn.btn-xl {
   font-size: var(--button-font-size-xl);
   height: var(--button-height-xl);
-  line-height: calc(var(--button-height-xl) - var(--button-border-width) * 2);
 }
 button.btn-primary,
 .btn.btn-primary {
@@ -1718,6 +1715,9 @@ button > .material-icons,
   vertical-align: middle;
   line-height: inherit !important;
   font-size: inherit !important;
+}
+a.btn {
+  line-height: calc(var(--button-height) - var(--button-border-width) * 2);
 }
 /* Loader buttons */
 .btn-loader,

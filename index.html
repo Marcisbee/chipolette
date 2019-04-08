@@ -7,7 +7,7 @@
     <title>Chipolette a tiny CSS framework</title>
     <meta name="description" content="Starter kit fork from Shoelace and Bootstrap, that fully embraces CSS variables / custom properties">
     <link rel="icon" href="./assets/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" /> -->
     <link rel="stylesheet" href="../chipolette/dist/chipolette.css" />
     <link rel="stylesheet" href="./docs.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css" />
@@ -39,12 +39,12 @@
           <p>No compilation required to change colors / sizes etc. Well that is if you don’t want to compile. It’s still written
             in
             LESS, because of nesting and other neat features that eases development of Chipolette.</p>
-          
+
           <p>It is designed to replace Bootstrap and to be used with CSS variables.</p>
-          
+
           <p>We can just defined variables in runtime or set prefedined ones, to change whole color scheme (buttons, links,
             background, margins etc.)</p>
-          
+
           <pre class="mb-md"><code class="language-css">/* Just change every available variable to your disire */
 :root {
     --state-primary: #ef7310;
@@ -56,22 +56,22 @@
     --headings-font-family: 'Bitter';
     --headings-margin-bottom: var(--margin-md);
 }</code></pre>
-          
+
           <h2 id="installation">Installation</h2>
           <p>To install the stable version:</p>
-          
+
           <pre class="mb-md"><code class="language-bash">npm install --save chipolette</code></pre>
 
           <p>and just import LESS version like so</p>
-          
+
           <pre class="mb-md"><code class="language-css">@import '../node_modules/chipolette/src/chipolette.less';
 // or CSS version
 @import '../node_modules/chipolette/dist/chipolette.min.css';</code></pre>
-          
+
           <p>This assumes you are using <a href="https://www.npmjs.com/" target="_blank">npm</a> as your package manager.</p>
-          
+
           <p>If you’re not, you can <a href="https://unpkg.com/chipolette@latest/dist/chipolette.min.css" target="_blank">access it on unpkg</a> like so</p>
-          
+
           <pre class="mb-md"><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/chipolette@latest/dist/chipolette.css" /&gt;</code></pre>
 
           <h4>Browser Compatibility</h4>
@@ -128,6 +128,77 @@
           </div>
 
           <pre class="mb-md"><code class="language-html">&lt;input class="pt-input .modifier" :modifier type="text" placeholder="Text input" /&gt;</code></pre>
+
+          <h4>Text input variables</h4>
+
+          <table class="table doc-table">
+            <thead>
+              <tr>
+                <th>Variable name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-height</code></td>
+                <td>Used for <code class="text-sm">input</code> as height
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">2.4rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-height-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">1.35rem|2rem|3rem|3.35rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-size</code></td>
+                <td>Used for <code class="text-sm">input</code> as font size
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">1rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-size-xs|sm|lg|xl</code></td>
+                <td><i class="text-sm">(defaults to <code class="text-sm">.625rem|.875rem|1.25rem|1.5rem</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-family</code></td>
+                <td>Used for <code class="text-sm">input</code> as font size
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-font-weight</code></td>
+                <td>Used for <code class="text-sm">input</code> as font weight
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-radius</code></td>
+                <td>Used for <code class="text-sm">input</code> as border radius
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-radius</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-width</code></td>
+                <td>Used for <code class="text-sm">input</code> as border width
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-width</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-border-color</code></td>
+                <td>Used for <code class="text-sm">input</code> as border color
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-color</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-speed</code></td>
+                <td>Used for <code class="text-sm">input</code> as animation/transition speed for background, color and border
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-speed</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--input-loader-size</code></td>
+                <td>Used for <code class="text-sm">input</code> as spinner diameter
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">1em</code>)</i></td>
+              </tr>
+              <tr>
+                <td><code class="text-nowrap text-sm doc-code">--label-color</code></td>
+                <td>Used for <code class="text-sm">label</code> as color
+                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2 id="checkboxes">Checkboxes</h2>
 
@@ -353,77 +424,6 @@
   &lt;label&gt;Radio&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
-          <h4>Text input variables</h4>
-          
-          <table class="doc-table">
-            <thead>
-              <tr>
-                <th>Variable name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-height</code></td>
-                <td>Used for <code class="text-sm">input</code> as height
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">2.4rem</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-height-xs|sm|lg|xl</code></td>
-                <td><i class="text-sm">(defaults to <code class="text-sm">1.35rem|2rem|3rem|3.35rem</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-font-size</code></td>
-                <td>Used for <code class="text-sm">input</code> as font size
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">1rem</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-font-size-xs|sm|lg|xl</code></td>
-                <td><i class="text-sm">(defaults to <code class="text-sm">.625rem|.875rem|1.25rem|1.5rem</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-font-family</code></td>
-                <td>Used for <code class="text-sm">input</code> as font size
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-font-weight</code></td>
-                <td>Used for <code class="text-sm">input</code> as font weight
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-border-radius</code></td>
-                <td>Used for <code class="text-sm">input</code> as border radius
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-radius</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-border-width</code></td>
-                <td>Used for <code class="text-sm">input</code> as border width
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-width</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-border-color</code></td>
-                <td>Used for <code class="text-sm">input</code> as border color
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-border-color</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-speed</code></td>
-                <td>Used for <code class="text-sm">input</code> as animation/transition speed for background, color and border
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">--component-speed</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--input-loader-size</code></td>
-                <td>Used for <code class="text-sm">input</code> as spinner diameter
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">1em</code>)</i></td>
-              </tr>
-              <tr>
-                <td><code class="text-nowrap text-sm doc-code">--label-color</code></td>
-                <td>Used for <code class="text-sm">label</code> as color
-                  <br /><i class="text-sm">(defaults to <code class="text-sm">inherit</code>)</i></td>
-              </tr>
-            </tbody>
-          </table>
-
           <h2 id="buttons">Buttons</h2>
 
           <div class="row">
@@ -549,15 +549,15 @@
             <div class="col col-sm-4 mb-lg">
               <code class="text-sm">.btn-icon-only</code>
               <div class="mt-sm">
-                <a role="button" class="btn btn-icon-only mr-xs" tabindex="0"><i class="material-icons">settings</i></a>
-                <button type="button" class="btn btn-icon-only"><i class="material-icons">settings</i></button>
+                <a role="button" class="btn btn-icon-only mr-xs" tabindex="0"><i class="material-icons text-lg">settings</i></a>
+                <button type="button" class="btn btn-icon-only"><i class="material-icons text-lg">settings</i></button>
               </div>
             </div>
             <div class="col col-sm-4 mb-lg">
               <code class="text-sm">`with icon`</code>
               <div class="mt-sm">
-                <a role="button" class="btn mr-xs" tabindex="0"><i class="material-icons mr-xs">settings</i>Anchor</a>
-                <button type="button" class="btn"><i class="material-icons mr-xs">settings</i>Button</button>
+                <a role="button" class="btn mr-xs" tabindex="0"><i class="material-icons mr-xs text-lg">settings</i>Anchor</a>
+                <button type="button" class="btn"><i class="material-icons mr-xs text-lg">settings</i>Button</button>
               </div>
             </div>
 
@@ -579,7 +579,7 @@
 
           <h4>Button variables</h4>
 
-          <table class="doc-table">
+          <table class="table doc-table">
             <thead>
               <tr>
                 <th>Variable name</th>
@@ -735,7 +735,7 @@
         </div>
       </div>
     </div>
-    
+
     <footer class="mt-xl text-center text-muted text-small">
       <div class="container">
 
@@ -747,7 +747,7 @@
           <a class="github-button" href="https://github.com/Marcisbee/chipolette/fork" data-icon="octicon-repo-forked"
             data-size="large" aria-label="Fork Marcisbee/chipolette on GitHub">Fork</a>
         </p>
-        
+
         <hr class="mb-md"/>
         <p>Copyright (c) 2019-present, Marcis (Marcisbee) Bergmanis</p>
       </div>

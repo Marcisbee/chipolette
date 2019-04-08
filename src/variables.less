@@ -580,6 +580,8 @@
   --input-focus-color: var(--state-primary);
   --input-speed: var(--component-speed);
   --input-margin-bottom: var(--margin-md);
+  --input-loader-size: 1em;
+  --input-loader-border-width: .15em;
 
   --input-color-disabled: var(--color-gray);
   --input-bg-color-disabled: #f1f1f1;
@@ -614,6 +616,34 @@
 
   --label-color: inherit;
 
+  /* Primary */
+  --input-color-primary: var(--state-primary);
+
+  /* Secondary */
+  --input-color-secondary: var(--state-secondary);
+
+  /* Success */
+  --input-color-success: var(--state-success);
+
+  /* Info */
+  --input-color-info: var(--state-info);
+
+  /* Warning */
+  --input-color-warning: var(--state-warning);
+
+  /* Danger */
+  --input-color-danger: var(--state-danger);
+
+  /* Light */
+  --input-color-light: var(--color-navy);
+
+  /* Dark */
+  --input-color-dark: var(--color-white);
+
+  /* Minimal */
+  --input-minimal-color: var(--color-navy);
+
+
   /*************************************************************************************************
   * Grid
   *************************************************************************************************/
@@ -642,9 +672,10 @@
   --loader-speed: 750ms;
   --loader-margin-x: .5em;
   --loader-margin-y: 0;
+  --loader-bg-color: rgba(100,100,100,0.1);
 
   /* Default */
-  --loader-color: var(--state-primary);
+  --loader-color: var(--text-color);
 
   /* Primary */
   --loader-color-primary: var(--state-primary);
@@ -674,11 +705,11 @@
   * Progress Bars
   *************************************************************************************************/
 
-  --progress-height: var(--input-height);
-  --progress-height-xs: var(--input-height-xs);
-  --progress-height-sm: var(--input-height-sm);
-  --progress-height-lg: var(--input-height-lg);
-  --progress-height-xl: var(--input-height-xl);
+  --progress-height: 1.4rem;
+  --progress-height-xs: .75rem;
+  --progress-height-sm: 1.2rem;
+  --progress-height-lg: 1.6rem;
+  --progress-height-xl: 2rem;
   --progress-font-size: var(--input-font-size);
   --progress-font-size-xs: var(--input-font-size-xs);
   --progress-font-size-sm: var(--input-font-size-sm);
@@ -805,7 +836,7 @@
   * Navbars
   *************************************************************************************************/
 
-  --navbar-bg-color: var(--body-bg-color);
+  --navbar-bg-color: var(--color-white);
   --navbar-padding: var(--grid-gutter-width);
   --navbar-height: 3.4rem;
   --navbar-border-radius: var(--border-radius);

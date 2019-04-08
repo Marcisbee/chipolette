@@ -6,7 +6,7 @@
   border-collapse: collapse;
   margin-bottom: 1.5rem;
 
-  & caption {
+  caption {
     caption-side: bottom;
     font-size: var(--font-size-small);
     color: var(--body-color-muted);
@@ -14,14 +14,14 @@
     padding-top: var(--table-spacing-y);
   }
 
-  & th {
+  th {
     text-align: left;
     background-color: var(--table-header-bg-color);
     border-bottom: solid calc(var(--table-border-width) * 2) var(--table-border-color);
     padding: var(--table-spacing-y) var(--table-spacing-x);
   }
 
-  & td {
+  td {
     border-bottom: solid var(--table-border-width) var(--table-border-color);
     padding: var(--table-spacing-y) var(--table-spacing-x);
   }
@@ -30,7 +30,7 @@
   &.table-bordered {
     border: solid var(--table-border-width) var(--table-border-color);
 
-    & td {
+    td {
       border-style: solid;
       border-width: var(--table-border-width);
       border-color: var(--table-border-color);
@@ -38,14 +38,14 @@
   }
 
   &.table-hoverable {
-    & tbody tr:hover td {
+    tbody tr:hover td {
       color: var(--table-hover-color);
       background-color: var(--table-hover-bg-color);
     }
   }
 
   &.table-striped {
-    & tbody tr:nth-child(odd) td {
+    tbody tr:nth-child(odd) td {
       background-color: var(--table-stripe-bg-color);
     }
   }

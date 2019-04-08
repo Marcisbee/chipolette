@@ -18,15 +18,24 @@ h1, h2 {
   padding-bottom: var(--margin-sm);
 }
 
+h2 {
+  margin-top: var(--margin-xl);
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
 #header {
   height: 40vh;
   text-align: center;
   background-color: rgba(255,255,255,0.5);
   margin-bottom: 5rem;
+  min-height: 370px;
 }
 
 #header img {
-  margin-top: 7vh;
+  margin-top: 6%;
   width: 370px;
   max-width: 90%;
 }
@@ -55,4 +64,43 @@ h1, h2 {
 .menu {
   border-right: 2px solid #ded1cd;
   padding-right: 20px;
+}
+
+pre code {
+  padding: 0;
+}
+
+body .variables {
+  background: #f5eee8!important;
+  max-height: 500px;
+}
+
+body .variables code {
+  color: #825949;
+  font-size: 14px;
+}
+
+body .variables .token.punctuation {
+  color: #d2cac4;
+}
+
+body .variables .token.function {
+  color: #1584de;
+}
+
+body .variables .token.property,
+body .variables .token.boolean,
+body .variables .token.number,
+body .variables .token.constant,
+body .variables .token.symbol,
+body .variables .token.attr-name,
+body .variables .token.deleted {
+  color: #e47d1c;
+}
+
+body .variables .token.comment,
+body .variables .token.prolog,
+body .variables .token.doctype,
+body .variables .token.cdata {
+  color: #b1a7a1;
 }

@@ -752,6 +752,15 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/css-vars-ponyfill@1/dist/css-vars-ponyfill.min.js"></script>
+    <script>
+      cssVarsPonyfill({
+        shadowDOM: false,
+        include: '[href*=chipolette],style',
+        exclude: '[href*=font]'
+      });
+    </script>
+
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>

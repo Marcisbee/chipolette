@@ -1,0 +1,124 @@
+<h2 id="text-inputs">Text inputs</h2>
+
+<div class="row">
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">default</code>
+    <div class="mt-sm">
+      <input type="text" placeholder="Text input" class="w-80" />
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm text-info">:disabled</code>
+    <div class="mt-sm">
+      <input type="text" placeholder="Text input" class="w-80" disabled />
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm text-info">:readonly</code>
+    <div class="mt-sm">
+      <input type="text" placeholder="Text input" class="w-80" readonly />
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.input-invalid (wrapper)</code>
+    <div class="mt-sm input-invalid w-80">
+      <input type="text" placeholder="Text input" />
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.input-valid (wrapper)</code>
+    <div class="mt-sm input-valid w-80">
+      <input type="text" placeholder="Text input" />
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.input-loader (wrapper)</code>
+    <div class="mt-sm input-loader w-80">
+      <input type="text" placeholder="Text input" />
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.input-xs</code>
+    <div class="mt-sm">
+      <input type="text" placeholder="Text input" class="w-80 input-xs" />
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.input-lg</code>
+    <div class="mt-sm">
+      <input type="text" placeholder="Text input" class="w-80 input-lg" />
+    </div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class=".modifier(wrapper)"&gt;
+  &lt;input class="pt-input .modifier" :modifier type="text" placeholder="Text input" /&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>Text input variables</h4>
+
+<pre class="mb-md variables"><code class="language-css">--input-height-xs: 1.35rem;
+--input-height-sm: 2rem;
+--input-height: 2.4rem;
+--input-height-lg: 3rem;
+--input-height-xl: 3.35rem;
+--input-font-size-xs: .625rem;
+--input-font-size-sm: .875rem;
+--input-font-size: 1rem;
+--input-font-size-lg: 1.25rem;
+--input-font-size-xl: 1.5rem;
+--input-font-family: inherit;
+--input-font-weight: inherit;
+--input-color: var(--body-color);
+--input-border-color: var(--component-border-color);
+--input-border-width: 1px;
+--input-border-radius: var(--component-border-radius);
+--input-bg-color: var(--color-white);
+--input-box-shadow: var(--component-box-shadow-inner);
+--input-readonly-bg-color: var(--component-bg-color);
+--input-focus-color: var(--state-primary);
+--input-speed: var(--component-speed);  /* Transition speed for bg and border */
+--input-margin-bottom: var(--margin-md);
+--input-loader-size: 1em;
+--input-loader-border-width: .15em;
+
+--input-color-disabled: var(--color-gray);
+--input-bg-color-disabled: #f1f1f1;
+--input-border-color-disabled: transparent;
+
+--input-addon-bg-color: var(--component-bg-color);
+--input-addon-color: var(--color-disabled);
+
+--input-hint-color: var(--body-color-muted);
+--input-hint-font-size: var(--font-size-small);
+
+--input-icon-width: 2em;
+--input-icon-offset: .5em;
+--input-icon-color: var(--state-primary);
+
+--input-range-track-height: .5rem;
+--input-range-track-color: var(--component-bg-color);
+--input-range-track-box-shadow: var(--component-box-shadow-inner);
+--input-range-thumb-height: 1.25rem;
+--input-range-thumb-color: var(--state-primary);
+
+--input-invalid-color: var(--body-color);
+--input-invalid-border-color: var(--state-danger);
+--input-valid-color: var(--body-color);
+--input-valid-border-color: var(--state-success);
+
+--fieldset-border-color: var(--component-border-color);
+--fieldset-border-width: var(--component-border-width);
+--fieldset-border-radius: var(--component-border-radius);
+--fieldset-padding-x: 2rem;
+--fieldset-padding-y: 1.5rem;
+
+--label-color: inherit;
+
+/* Primary */
+--input-color-primary: var(--state-primary);
+
+... (Secondary, Success, Info, Warning, Danger)
+</code></pre>

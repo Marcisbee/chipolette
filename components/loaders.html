@@ -1,0 +1,121 @@
+<h2 id="loaders">Loaders</h2>
+
+<div class="row">
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">default</code>
+    <div class="mt-sm">
+      <i class="loader"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-primary</code>
+    <div class="mt-sm">
+      <i class="loader loader-primary"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-secondary</code>
+    <div class="mt-sm">
+      <i class="loader loader-secondary"></i>
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-success</code>
+    <div class="mt-sm">
+      <i class="loader loader-success"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-info</code>
+    <div class="mt-sm">
+      <i class="loader loader-info"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-warning</code>
+    <div class="mt-sm">
+      <i class="loader loader-warning"></i>
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-danger</code>
+    <div class="mt-sm">
+      <i class="loader loader-danger"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-xs</code>
+    <div class="mt-sm">
+      <i class="loader loader-xs"></i>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-xl</code>
+    <div class="mt-sm">
+      <i class="loader loader-xl"></i>
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-bg</code>
+    <div class="mt-sm">
+      <div class="card loader-bg">
+        <div class="card-body">
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-bg.loader-bg-primary</code>
+    <div class="mt-sm">
+      <div class="card loader-bg loader-bg-primary">
+        <div class="card-body">
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.loader-bg.loader-bg-success</code>
+    <div class="mt-sm">
+      <div class="card loader-bg loader-bg-success">
+        <div class="card-body">
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;i class="loader .modifier"&gt;&lt;/i&gt;
+&lt;div class="loader-bg .modifier"&gt;...&lt;/div&gt;
+</code></pre>
+
+<h4>Loader variables</h4>
+
+<pre class="mb-md variables"><code class="language-css">--loader-thickness: .2rem;
+--loader-thickness-xs: calc(var(--loader-thickness) / 2);
+--loader-thickness-sm: calc(var(--loader-thickness) / 1.5);
+--loader-thickness-lg: calc(var(--loader-thickness) * 1.5);
+--loader-thickness-xl: calc(var(--loader-thickness) * 2);
+--loader-size-xs: var(--input-height-xs);
+--loader-size-sm: var(--input-height-sm);
+--loader-size: var(--input-height);
+--loader-size-lg: var(--input-height-lg);
+--loader-size-xl: var(--input-height-xl);
+--loader-speed: 750ms;
+--loader-margin-x: .5em;
+--loader-margin-y: 0;
+--loader-bg-color: rgba(100,100,100,0.1);
+
+/* Default */
+--loader-color: var(--state-default);
+
+/* Primary */
+--loader-color-primary: var(--state-primary);
+
+... (Secondary, Success, Info, Warning, Danger)
+</code></pre>

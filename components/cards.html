@@ -1,0 +1,155 @@
+<h2 id="cards">Cards</h2>
+
+<div class="row">
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">default</code>
+    <div class="mt-sm">
+      <div class="card">
+        <div class="card-body text-md">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.elevation-0</code>
+    <div class="mt-sm">
+      <div class="card elevation-1">
+        <div class="card-body text-md">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.elevation-1</code>
+    <div class="mt-sm">
+      <div class="card elevation-1">
+        <div class="card-body text-md">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.elevation-2</code>
+    <div class="mt-sm">
+      <div class="card elevation-2">
+        <div class="card-body text-md">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.elevation-3</code>
+    <div class="mt-sm">
+      <div class="card">
+        <div class="card-body text-md elevation-3">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.elevation-4</code>
+    <div class="mt-sm">
+      <div class="card elevation-4">
+        <div class="card-body text-md">
+          Roses are Red,<br />Violets are Blue,<br /><br />Unexpected '{' on line 32.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">with header & footer</code>
+    <div class="mt-sm">
+      <div class="card">
+        <div class="card-header text-md">
+          Card Header
+        </div>
+        <div class="card-body text-md">
+          Card Body
+        </div>
+        <div class="card-footer text-md">
+          Card Footer
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.card-primary</code>
+    <div class="mt-sm">
+      <div class="card card-primary">
+        <div class="card-header text-md">
+          Card Header
+        </div>
+        <div class="card-body text-md">
+          Card Body
+        </div>
+        <div class="card-footer text-md">
+          Card Footer
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4 mb-lg">
+    <code class="text-sm">.card-info.elevation-4</code>
+    <div class="mt-sm">
+      <div class="card card-info elevation-4">
+        <div class="card-header text-md">
+          Card Header
+        </div>
+        <div class="card-body text-md">
+          Card Body
+        </div>
+        <div class="card-footer text-md">
+          Card Footer
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class="card .modifier"&gt;
+  &lt;div class="card-header"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>Card variables</h4>
+
+<pre class="mb-md variables"><code class="language-css">--card-bg-color: var(--color-white);
+--card-padding: 1.25rem;
+--card-padding-header: 1.15rem;
+--card-padding-footer: 1.25rem;
+--card-border-radius: var(--border-radius);
+--card-elevation-shadow: var(--elevation-shadow-0);
+--card-header-border-color: var(--color-black-alpha-10);
+--card-header-color: var(--color-disabled);
+--card-header-bg: var(--color-barely-gray);
+--card-footer-border-color: var(--color-black-alpha-10);
+--card-footer-color: var(--color-disabled);
+--card-footer-bg: var(--color-barely-gray);
+--card-body-bg: var(--color-white);
+
+/* Primary */
+--card-border-color-primary: var(--color-black-alpha-20);
+--card-header-bg-primary: var(--state-primary);
+--card-header-color-primary: var(--color-white);
+--card-body-bg-primary: var(--state-primary);
+--card-body-color-primary: var(--color-white);
+--card-footer-bg-primary: var(--state-primary);
+--card-footer-color-primary: var(--color-white);
+--card-elevation-shadow-primary: none;
+
+... (Secondary, Success, Info, Warning, Danger)
+</code></pre>

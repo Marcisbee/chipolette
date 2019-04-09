@@ -1,0 +1,155 @@
+<h2 id="grid">Grid</h2>
+
+<div class="row">
+  <div class="col-sm">
+    <div class="alert alert-primary text-sm">One of three columns</div>
+  </div>
+  <div class="col-sm">
+    <div class="alert alert-primary text-sm">One of three columns</div>
+  </div>
+  <div class="col-sm">
+    <div class="alert alert-primary text-sm">One of three columns</div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class="row"&gt;
+  &lt;div class="col-sm"&gt;
+    One of three columns
+  &lt;/div&gt;
+  &lt;div class="col-sm"&gt;
+    One of three columns
+  &lt;/div&gt;
+  &lt;div class="col-sm"&gt;
+    One of three columns
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="row">
+  <div class="col">
+    <div class="alert alert-primary text-sm">1 of 2</div>
+  </div>
+  <div class="col">
+    <div class="alert alert-primary text-sm">2 of 2</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="alert alert-primary text-sm">1 of 3</div>
+  </div>
+  <div class="col">
+    <div class="alert alert-primary text-sm">2 of 3</div>
+  </div>
+  <div class="col">
+    <div class="alert alert-primary text-sm">3 of 3</div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class="row"&gt;
+  &lt;div class="col"&gt;
+    1 of 2
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    2 of 2
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;
+    1 of 3
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    2 of 3
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    3 of 3
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="row row-md-center">
+  <div class="col col-lg-2">
+    <div class="alert alert-primary text-sm">1 of 3</div>
+  </div>
+  <div class="col-md-auto">
+    <div class="alert alert-primary text-sm">Variable width content</div>
+  </div>
+  <div class="col col-lg-2">
+    <div class="alert alert-primary text-sm">3 of 3</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="alert alert-primary text-sm">1 of 3</div>
+  </div>
+  <div class="col-md-auto">
+    <div class="alert alert-primary text-sm">Variable width content</div>
+  </div>
+  <div class="col col-lg-2">
+    <div class="alert alert-primary text-sm">3 of 3</div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class="row row-md-center"&gt;
+  &lt;div class="col col-lg-2"&gt;
+    1 of 3
+  &lt;/div&gt;
+  &lt;div class="col-md-auto"&gt;
+    Variable width content
+  &lt;/div&gt;
+  &lt;div class="col col-lg-2"&gt;
+    3 of 3
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;
+    1 of 3
+  &lt;/div&gt;
+  &lt;div class="col-md-auto"&gt;
+    Variable width content
+  &lt;/div&gt;
+  &lt;div class="col col-lg-2"&gt;
+    3 of 3
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="alert alert-primary text-sm">.col-md-4</div>
+  </div>
+  <div class="col-md-4 offset-md-4">
+    <div class="alert alert-primary text-sm">.col-md-4 .offset-md-4</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3 offset-md-3">
+    <div class="alert alert-primary text-sm">.col-md-3 .offset-md-3</div>
+  </div>
+  <div class="col-md-3 offset-md-3">
+    <div class="alert alert-primary text-sm">.col-md-3 .offset-md-3</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="alert alert-primary text-sm">.col-md-6 .offset-md-3</div>
+  </div>
+</div>
+
+<pre class="mb-md"><code class="language-html">&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4 offset-md-4"&gt;.col-md-4 .offset-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+  &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-6 offset-md-3"&gt;.col-md-6 .offset-md-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>Grid variables</h4>
+
+<pre class="mb-md variables"><code class="language-css">--container-max-width-sm: 540px;
+--container-max-width-md: 720px;
+--container-max-width-lg: 960px;
+--container-max-width-xl: 1140px;
+
+--grid-gutter-width: 1rem;
+</code></pre>

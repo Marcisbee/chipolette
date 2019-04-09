@@ -1,0 +1,20 @@
+<h2 id="motivation">Motivation</h2>
+<p>No compilation required to change colors / sizes etc. Well that is if you don’t want to compile. It’s still written in
+  LESS, because of nesting and other neat features that eases development of Chipolette.</p>
+
+<p>It is designed to replace Bootstrap and to be used with CSS variables.</p>
+
+<p>We can just defined variables in runtime or set prefedined ones, to change whole color scheme (buttons, links,
+  background, margins etc.)</p>
+
+<pre class="mb-md"><code class="language-css">/* Just change every available variable to your disire */
+:root {
+    --state-primary: #ef7310;
+    --state-warning: #ffc31b;
+    ...
+    --body-color: #6d5346;
+    --body-bg-color: #eee6e1;
+    --font-system: 'Open Sans';
+    --headings-font-family: 'Bitter';
+    --headings-margin-bottom: var(--margin-md);
+}</code></pre>

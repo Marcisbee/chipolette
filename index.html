@@ -86,6 +86,8 @@
             return cb(null, pageCache[name]);
           }
 
+          container.className = 'loader-bg';
+
           var xhr = new XMLHttpRequest();
           xhr.open('GET', './components/' + name + '.html', true);
           xhr.onreadystatechange = function () {
@@ -101,8 +103,6 @@
           var name = location.hash.replace(/^\#/, '');
 
           if (name === '') name = 'motivation';
-
-          container.className = 'loader-bg';
 
           importComponent(name, (error, html) => {
             if (error) return render(NotFound);

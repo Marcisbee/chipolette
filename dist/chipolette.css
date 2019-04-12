@@ -2846,6 +2846,7 @@ input[type="range"]:focus::-ms-fill-upper {
   padding-right: 1.25rem;
   height: var(--checkbox-size);
   line-height: var(--checkbox-size);
+  z-index: 3;
 }
 .checkbox label:empty {
   width: calc(var(--checkbox-size) - 1px);
@@ -3033,6 +3034,7 @@ input[type="range"]:focus::-ms-fill-upper {
   padding-right: 1.25rem;
   height: var(--radio-size);
   line-height: var(--radio-size);
+  z-index: 3;
 }
 .radio label:empty {
   width: calc(var(--radio-size) - 1px);

@@ -6,7 +6,7 @@ fieldset {
   border: 0;
   min-width: 0;
 
-  & legend {
+  legend {
     font-weight: var(--font-weight-bold);
     padding: 0 .25rem;
   }
@@ -18,7 +18,7 @@ fieldset {
 
 label {
   color: var(--label-color);
-  display: inline-block;
+  display: block;
   margin-bottom: .25rem;
 
   & + label {
@@ -318,9 +318,9 @@ input[type="range"] {
   }
 
   /* Force a new stacking context so focus rings don't get truncated by adjacent elements */
-  & button:focus,
-  & .button:focus,
-  & .file-button input[type="file"]:focus + label {
+  button:focus,
+  .button:focus,
+  .file-button input[type="file"]:focus + label {
     transform: translateZ(0);
   }
 }
@@ -932,37 +932,37 @@ input[type="range"] {
 
 /* Validation */
 .input-invalid {
-  & label {
-    color: var(--input-invalid-color) !important;
+  label {
+    color: var(--label-invalid-color) !important;
   }
 
-  & input,
-  & select,
-  & textarea {
+  input,
+  select,
+  textarea {
     color: var(--input-invalid-color) !important;
     border-color: var(--input-invalid-border-color) !important;
   }
 
-  & .input-icon :first-child:not(input, select),
-  & .input-icon :last-child:not(input, select) {
+  .input-icon :first-child:not(input, select),
+  .input-icon :last-child:not(input, select) {
     color: var(--input-invalid-color);
   }
 }
 
 .input-valid {
-  & label {
-    color: var(--input-valid-color) !important;
+  label {
+    color: var(--label-valid-color) !important;
   }
 
-  & input,
-  & select,
-  & textarea {
+  input,
+  select,
+  textarea {
     color: var(--input-valid-color) !important;
     border-color: var(--input-valid-border-color) !important;
   }
 
-  & .input-icon :first-child:not(input, select),
-  & .input-icon :last-child:not(input, select) {
+  .input-icon :first-child:not(input, select),
+  .input-icon :last-child:not(input, select) {
     color: var(--input-valid-color);
   }
 }

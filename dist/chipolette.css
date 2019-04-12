@@ -915,6 +915,8 @@ template {
   --fieldset-padding-x: 2rem;
   --fieldset-padding-y: 1.5rem;
   --label-color: inherit;
+  --label-invalid-color: var(--label-color);
+  --label-valid-color: var(--label-color);
   /* Primary */
   --input-color-primary: var(--state-primary);
   /* Secondary */
@@ -2328,7 +2330,7 @@ fieldset > :last-child {
 }
 label {
   color: var(--label-color);
-  display: inline-block;
+  display: block;
   margin-bottom: 0.25rem;
 }
 label + label {
@@ -3252,7 +3254,7 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 /* Validation */
 .input-invalid label {
-  color: var(--input-invalid-color) !important;
+  color: var(--label-invalid-color) !important;
 }
 .input-invalid input,
 .input-invalid select,
@@ -3265,7 +3267,7 @@ input[type="range"]:focus::-ms-fill-upper {
   color: var(--input-invalid-color);
 }
 .input-valid label {
-  color: var(--input-valid-color) !important;
+  color: var(--label-valid-color) !important;
 }
 .input-valid input,
 .input-valid select,

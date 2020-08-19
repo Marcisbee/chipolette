@@ -3258,7 +3258,8 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 .input-invalid input,
 .input-invalid select,
-.input-invalid textarea {
+.input-invalid textarea,
+.input-invalid .panel-radio {
   color: var(--input-invalid-color) !important;
   border-color: var(--input-invalid-border-color) !important;
 }
@@ -3271,7 +3272,8 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 .input-valid input,
 .input-valid select,
-.input-valid textarea {
+.input-valid textarea,
+.input-invalid .panel-radio {
   color: var(--input-valid-color) !important;
   border-color: var(--input-valid-border-color) !important;
 }

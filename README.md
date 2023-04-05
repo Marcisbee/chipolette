@@ -9,7 +9,7 @@ No compilation required to change colors / sizes etc. Well that is if you don't 
 It is designed to replace Bootstrap and to be used with CSS variables.
 
 [![npm version](https://img.shields.io/npm/v/chipolette.svg?style=flat-square)](https://www.npmjs.com/package/chipolette)
-[![chipolette workspace on slack](https://img.shields.io/badge/slack-chipolette-3eb891.svg?style=flat-square)](https://join.slack.com/t/radijs/shared_invite/enQtMjk3NTE2NjYxMTI2LWFmMTM5NTgwZDI5NmFlYzMzYmMxZjBhMGY0MGM2MzY5NmExY2Y0ODBjNDNmYjYxZWYxMjEyNjJhNjA5OTJjNzQ)
+[![discord](https://dcbadge.vercel.app/api/server/a62gfaDW2e?style=flat-square)](https://discord.gg/a62gfaDW2e)
 
 
 ## Installation
